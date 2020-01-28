@@ -1,0 +1,62 @@
+.detailOfCarRent{
+    height: 100%;
+    width: 100%;
+    background-color: rgba(240,240,240,0.9);
+}
+
+span{
+    font-weight: bold;
+    font-size: xx-large;
+    color: rgb(22, 47, 85);
+}
+
+table{
+    margin: auto;
+    width: 90%;
+    text-align: right;
+}
+
+tr{
+    border: 1px solid black;
+    height: 40px;
+}
+
+tr:nth-child(even)
+{
+    background-color: rgb(243, 224, 224);
+}
+
+tr:nth-child(odd)
+{
+    background-color: rgb(241, 197, 197);
+}
+
+td{
+    padding-right:10px;
+    color: rgb(22, 47, 85);
+}
+
+
+td:nth-child(1){
+    width: 45%;
+}
+
+button{
+    position: relative;
+    width:20%;
+    height: 50px;
+    right: 77%;
+    top: 5%;
+    background-color: rgb(90, 196, 90);
+    color: white;
+    font-size: large;
+}
+
+button:disabled{
+    background-color: rgb(140, 194, 140);
+    color: rgb(194, 194, 194);
+}
+
+.detailTitle{
+    font-weight: bold;
+}

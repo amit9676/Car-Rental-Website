@@ -1,0 +1,84 @@
+<div style='width: 100%; height: 100%;'>
+    <div dir='rtl' class='detailOfOrder'>
+        <div *ngIf='!oneOrder'>
+            <br><br><br>
+            <img  src="/assets/images/loading2.gif" >
+            <br><br><br>
+        </div>
+        <span *ngIf='oneOrder'>פרטי הזמנה - {{oneOrder.orderedCar.manufactor.manufactor}} {{oneOrder.orderedCar.model.model}}</span>
+        <br *ngIf='oneOrder'>
+        <hr *ngIf='oneOrder'>
+
+        <table *ngIf='oneOrder'>
+            <tr>
+                <td class='detailTitle'>מספר הזמנה: </td>
+                <td>{{oneOrder.id}}</td>
+            </tr>
+            <tr *ngIf='managerview'>
+                <td  class='detailTitle'>משתמש מזמין: </td>
+                <td>{{oneOrder.orderingUser.userName}}</td>
+            </tr>
+            <tr>
+                <td class='detailTitle'>מספר רכב: </td>
+                <td>{{oneOrder.orderedCar.carNum}}</td>
+            </tr>
+            <tr>
+                <td class='detailTitle'>תחילת הזמנה: </td>
+                <td>{{oneOrder.startDate | date:'dd.MM.yyyy'}}</td>
+            </tr>
+            <tr>
+                <td class='detailTitle'>סיום הזמנה: </td>
+                <td>{{oneOrder.endDate | date:'dd.MM.yyyy'}}</td>
+            </tr>
+            <tr *ngIf='oneOrder.orderStatus == "הוחזר"'>
+                <td  class='detailTitle'>סיום הזמנה בפועל: </td >
+                <td>{{oneOrder.actualEndDate | date:'dd.MM.yyyy'}}</td>
+            </tr>
+            <tr>
+                <td class='detailTitle'>מספר ימי הזמנה: </td>
+                <td>{{dateManager.getDaysDifference(oneOrder.startDate, oneOrder.endDate)}}</td>
+            </tr>
+            <tr>
+                <td class='detailTitle'>עלות הזמנה: </td>
+                <td>{{dateManager.getDaysDifference(oneOrder.startDate, oneOrder.endDate) * oneOrder.orderedCar.dailyRent}}₪</td>
+            </tr>
+            <tr>
+                <td class='detailTitle'>סטטוס הזמנה: </td>
+                <td>{{oneOrder.orderStatus}}</td>
+            </tr>
+            <tr *ngIf='oneOrder.orderStatus == "פעיל"'>
+                <td class='detailTitle'>מספר ימי השכרה נוכחי: </td>
+                <td>{{dateManager.getDaysDifference(oneOrder.startDate, null)}}</td>
+            </tr>
+            <tr *ngIf='oneOrder.orderStatus == "פעיל"'>
+                <td class='detailTitle'>עלות השכרה נוכחית: </td>
+                <td>{{dateManager.getDaysDifference(oneOrder.startDate, null) * oneOrder.orderedCar.dailyRent}}₪</td>
+            </tr>
+            <tr *ngIf='oneOrder.orderStatus == "פעיל"'>
+                <td class='detailTitle'>מספר ימי השכרה נותרים: </td>
+                <td>{{dateManager.getDaysDifference(oneOrder.startDate, oneOrder.endDate) - dateManager.getDaysDifference(oneOrder.startDate, null)}}</td>
+            </tr>
+            <tr *ngIf='oneOrder.orderStatus == "מאחר" || oneOrder.orderStatus == "הוחזר"'>
+                <td class='detailTitle'>מספר ימי איחור: </td>
+                <td>{{dateManager.getDaysDifference(oneOrder.endDate, oneOrder.actualEndDate, true)}}</td>
+            </tr>
+            <tr *ngIf='oneOrder.orderStatus == "מאחר" || oneOrder.orderStatus == "הוחזר"'>
+                <td class='detailTitle'>עלות איחור: </td>
+                <td>{{dateManager.getDaysDifference(oneOrder.endDate, oneOrder.actualEndDate, true) * oneOrder.orderedCar.lateRent}}₪</td>
+            </tr>
+            
+            <tr *ngIf='oneOrder.orderStatus == "מאחר" || oneOrder.orderStatus == "הוחזר"'>
+                <td class='detailTitle'>ימי השכרה כוללים: </td>
+                <td>{{dateManager.getDaysDifference(oneOrder.startDate, oneOrder.endDate) + dateManager.getDaysDifference(oneOrder.endDate, oneOrder.actualEndDate, true)}}</td>
+            </tr>
+            <tr *ngIf='oneOrder.orderStatus == "מאחר" || oneOrder.orderStatus == "הוחזר"'>
+                <td class='detailTitle'>עלות השכרה כוללת: </td>
+                <td>{{oneOrder.price}}₪</td>
+            </tr>
+
+        </table>
+
+        <button  *ngIf='managerview' (click)='getOutOfHeere()' class='form-control'>חזור להזמנות</button>
+        <button  *ngIf='!managerview' (click)='getOutOfHeere()' class='form-control'>חזור להזמנות</button>
+    </div>
+</div>

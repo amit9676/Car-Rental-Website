@@ -1,0 +1,82 @@
+.ordersScreen{
+    width: 100%;
+    height: 100%;
+}
+
+.ordersDiv{
+    width: 95%;
+    height: 78%;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: rgb(22, 47, 85);
+    border-radius: 15px;
+    margin: 2px;
+    position: relative;
+    left: 50%;
+    top: 2.5%;
+    transform: translate(-50%, 0);
+    overflow: auto;
+}
+
+table{
+    margin: auto;
+    position: relative;
+    width: 100%;
+    direction: rtl;
+
+}
+
+th{
+    height: 50px;
+    background-color: rgb(240, 146, 146);
+    font-weight: bold;
+    font-size: 25px;
+}
+
+table, th, td
+{
+    border: 1px solid rgb(233, 116, 116);
+    border-spacing: 1px;
+    border-collapse: separate;
+}
+
+th:nth-child(5){
+    width: 14%;
+}
+
+button{
+    margin: 3px;
+    width: 45%;
+    position: relative;
+}
+
+tr:nth-child(even)
+{
+    background-color: rgb(243, 224, 224);
+}
+
+tr:nth-child(odd)
+{
+    background-color: rgb(241, 197, 197);
+}
+
+td{
+    font-size: larger;
+}
+
+.titleDiv{
+    height: 10%;
+    width: 100%;
+    background-color: rgba(220,220,220,0.7);
+}
+
+.title{
+    position: relative;
+    font-size: 30px;
+    font-weight: bold;
+    color: rgb(22, 47, 85);
+    top: 10%;
+}
+
+input{
+    width: 87%;
+}

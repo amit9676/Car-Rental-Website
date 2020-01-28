@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="CarRentServiceModelStoreContainer" CdmEntityContainer="CarRentServiceEntities">
+    <EntitySetMapping Name="Branches">
+      <EntityTypeMapping TypeName="CarRentServiceModel.Branch">
+        <MappingFragment StoreEntitySet="Branches">
+          <ScalarProperty Name="BranchID" ColumnName="BranchID" />
+          <ScalarProperty Name="BranchName" ColumnName="BranchName" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="Latitude" ColumnName="Latitude" />
+          <ScalarProperty Name="Longitude" ColumnName="Longitude" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Cars">
+      <EntityTypeMapping TypeName="CarRentServiceModel.Car">
+        <MappingFragment StoreEntitySet="Cars">
+          <ScalarProperty Name="CarID" ColumnName="CarID" />
+          <ScalarProperty Name="CarNumber" ColumnName="CarNumber" />
+          <ScalarProperty Name="ManufactorID" ColumnName="ManufactorID" />
+          <ScalarProperty Name="ModelID" ColumnName="ModelID" />
+          <ScalarProperty Name="DesignID" ColumnName="DesignID" />
+          <ScalarProperty Name="GearID" ColumnName="GearID" />
+          <ScalarProperty Name="Kilometrage" ColumnName="Kilometrage" />
+          <ScalarProperty Name="Year" ColumnName="Year" />
+          <ScalarProperty Name="FunctionalForRent" ColumnName="FunctionalForRent" />
+          <ScalarProperty Name="RentDayPrice" ColumnName="RentDayPrice" />
+          <ScalarProperty Name="LateDayRentPrice" ColumnName="LateDayRentPrice" />
+          <ScalarProperty Name="Picture" ColumnName="Picture" />
+          <ScalarProperty Name="BranchID" ColumnName="BranchID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Designs">
+      <EntityTypeMapping TypeName="CarRentServiceModel.Design">
+        <MappingFragment StoreEntitySet="Designs">
+          <ScalarProperty Name="DesignID" ColumnName="DesignID" />
+          <ScalarProperty Name="CarDesign" ColumnName="CarDesign" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Gears">
+      <EntityTypeMapping TypeName="CarRentServiceModel.Gear">
+        <MappingFragment StoreEntitySet="Gears">
+          <ScalarProperty Name="GearID" ColumnName="GearID" />
+          <ScalarProperty Name="GearType" ColumnName="GearType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Genders">
+      <EntityTypeMapping TypeName="CarRentServiceModel.Gender">
+        <MappingFragment StoreEntitySet="Genders">
+          <ScalarProperty Name="GenderID" ColumnName="GenderID" />
+          <ScalarProperty Name="Gender1" ColumnName="Gender" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Manufactors">
+      <EntityTypeMapping TypeName="CarRentServiceModel.Manufactor">
+        <MappingFragment StoreEntitySet="Manufactors">
+          <ScalarProperty Name="ManufactorID" ColumnName="ManufactorID" />
+          <ScalarProperty Name="Manufactor1" ColumnName="Manufactor" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Models">
+      <EntityTypeMapping TypeName="CarRentServiceModel.Model">
+        <MappingFragment StoreEntitySet="Models">
+          <ScalarProperty Name="ModelID" ColumnName="ModelID" />
+          <ScalarProperty Name="Model1" ColumnName="Model" />
+          <ScalarProperty Name="ManufactorID" ColumnName="ManufactorID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Ranks">
+      <EntityTypeMapping TypeName="CarRentServiceModel.Rank">
+        <MappingFragment StoreEntitySet="Ranks">
+          <ScalarProperty Name="RankID" ColumnName="RankID" />
+          <ScalarProperty Name="Rank1" ColumnName="Rank" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Rents">
+      <EntityTypeMapping TypeName="CarRentServiceModel.Rent">
+        <MappingFragment StoreEntitySet="Rents">
+          <ScalarProperty Name="RentalID" ColumnName="RentalID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="CarID" ColumnName="CarID" />
+          <ScalarProperty Name="RentDate" ColumnName="RentDate" />
+          <ScalarProperty Name="ExpectedReturnDate" ColumnName="ExpectedReturnDate" />
+          <ScalarProperty Name="ActualReturnDate" ColumnName="ActualReturnDate" />
+          <ScalarProperty Name="StatusID" ColumnName="StatusID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Statuses">
+      <EntityTypeMapping TypeName="CarRentServiceModel.Status">
+        <MappingFragment StoreEntitySet="Statuses">
+          <ScalarProperty Name="StatusID" ColumnName="StatusID" />
+          <ScalarProperty Name="Status1" ColumnName="Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="CarRentServiceModel.User">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="SocialNumber" ColumnName="SocialNumber" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="DateOfBirth" ColumnName="DateOfBirth" />
+          <ScalarProperty Name="GenderID" ColumnName="GenderID" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="RankID" ColumnName="RankID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

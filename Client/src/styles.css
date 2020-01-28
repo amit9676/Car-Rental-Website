@@ -1,0 +1,6 @@
+html, body{
+    height: 100%;
+    background-image: url('/assets/images/road2.jpg');
+    margin: 0;
+    padding: 0;
+}

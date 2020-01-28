@@ -1,0 +1,95 @@
+<div class='usersScreen'>
+    <div class='titleDiv'>
+            <span class='title'>ניהול משתמשים</span>
+    </div>
+    <div dir='rtl' style='width: 30%; height: 7%; position: relative; top: 2%; left: 50%; transform: translateX(-50%); background-color: rgba(220,220,220,0.7);'>
+         <span style='position: relative; top: 20%; 
+         color: rgb(22, 47, 85); font-weight: bold;'>חפש: </span>
+         <input [(ngModel)]='searchValue' placeholder="חפש לפי כל פרמטר (לתאריך חפש כ- yyyy-mm-dd)" (input)='listFilter(allUsers)' style='width: 85%; position: relative; top: 15%;' type="text">
+    </div>
+    <div class='usersDiv'>
+        <form #formInfo='ngForm'>
+            <table>
+                <th>מספר משתמש</th>
+                <th>שם מלא</th>
+                <th>תעודת זהות</th>
+                <th>שם משתמש</th>
+                <th>תאריך לידה</th>
+                <th>מין</th>
+                <th>אימייל</th>
+                <th>תפקיד</th>
+                <th>תמונה</th>
+                <th>אפשרויות</th>
+                <tr *ngFor='let item of presentedUsers'>
+                    
+                    <td>
+                        <span>{{item.id}}</span>
+                    </td>
+                    <td>
+                        <span *ngIf='!editMode[item.id]'>{{item.firstName}} {{item.lastName}}</span>
+                        <input [(ngModel)]='editFirstName' name='firstName' required maxlength="30" style='width: 45%; margin: 5px;' type='text' *ngIf='editMode[item.id]'>
+                        <input [(ngModel)]='editLastName' name='lastName' required maxlength="30" style='width: 45%; margin: 5px;' type='text' *ngIf='editMode[item.id]'>
+                    </td>
+                    <td>
+                        <span *ngIf='!editMode[item.id]'>{{item.socialNumber}}</span>
+                        <input [(ngModel)]='editSocialNumber' name='socialNumber' required type='tel' pattern="[0-9]{9}" (input)='validatedSocialNumber = userHandler.checkSocialNumber(allUsers, editSocialNumber, myUser.id)' *ngIf='editMode[item.id]'>
+                        <br *ngIf='editMode[item.id]  && !validatedSocialNumber'>
+                        <span *ngIf='editMode[item.id] && !validatedSocialNumber' style='font-size: 14px; color: red;'>תעודת זהות זו כבר נמצאת בשימוש</span>
+                    </td>
+                    <td>
+                        <span *ngIf='!editMode[item.id]'>{{item.userName}}</span>
+                        <input [(ngModel)]='editUserName' name='userName' required maxlength="30" type='text' (input)='validatedUserName = userHandler.checkUserName(allUsers, editUserName, myUser.id)' *ngIf='editMode[item.id]'>
+                        <br *ngIf='editMode[item.id]  && !validatedUserName'>
+                        <span *ngIf='editMode[item.id] && !validatedUserName' style='font-size: 14px; color: red;'>שם משתמש זה כבר נמצא בשימוש</span>
+                    </td>
+                    <td>
+                        <span *ngIf='!editMode[item.id]'>{{item.dateOfBirth | date:'dd.MM.yyyy' | nullVal}}</span>
+                        
+                        <input #birthDay (input)='editBirthDate = dateManager.editDate(birthDay)'  value='{{dateManager.checkYearInput(dateManager.getYear(initialBirthDate))}}-{{this.dateManager.getMonth(initialBirthDate)}}-{{dateManager.getDay(initialBirthDate)}}' (input)='isFuture = dateManager.checkDate(birthDay)' type='date' *ngIf='editMode[item.id]'>
+                        <br *ngIf='editMode[item.id]  && isFuture'>
+                        <span *ngIf='editMode[item.id] && isFuture' style='font-size: 14px; color: red;'>תאריך לידה לא יכול להיות בעתיד</span>
+                    </td>
+                    <td>
+                        <span *ngIf='!editMode[item.id]'>{{item.gender.gender}}</span>
+                        <select *ngIf='editMode[item.id]' required [(ngModel)]='editGender' name='gender'>
+                            <option value='1'>זכר</option>
+                            <option value='2'>נקבה</option>
+                        </select>
+                    </td>
+                    <td>
+                        <span *ngIf='!editMode[item.id]'>{{item.email}}</span>
+                        <input [(ngModel)]='editEmail' name='email' maxlength="100" type='text' pattern="^\w*@{1}\w*(.com|.co.il)$" (input)='validatedEmail = userHandler.checkEmail(allUsers, editEmail, myUser.id)' *ngIf='editMode[item.id]'>
+                        <br *ngIf='editMode[item.id]  && !validatedEmail'>
+                        <span *ngIf='editMode[item.id] && !validatedEmail' style='font-size: 14px; color: red;'>אימייל זה כבר נמצא בשימוש</span>
+                    </td>
+                    <td>
+                        <span *ngIf='!editMode[item.id]'>{{item.rank.rank}}</span>
+                        <select [disabled]='item.id == myUser.id' *ngIf='editMode[item.id]'  required [(ngModel)]='editRank' name='rank'>
+                                <option value='1'>לקוח</option>
+                                <option value='2'>עובד</option>
+                                <option value='3'>מנהל</option>
+                            </select>
+                    </td>
+                    <td>
+                        <img class='profilePic' *ngIf='item.image' style='width: 50px; position: relative; right: 32%; transform: translateX(50%);' src='http://localhost:57250/Uploads/{{item.image}}'>
+                        <img *ngIf='!item.image' src='/assets/images/userIcon.png' style="position: relative; width: 85px;">
+                        <button routerLink='/user-manager/edit-user-picture/{{item.id}}' *ngIf='editMode[item.id]' style='font-size: medium; width: 95%;'>ערוך תמונה</button>
+                    </td>
+                    <td>
+
+                        <button *ngIf='!editMode[item.id] && !updateMode[item.id]' (click)='convertToInput(item)'>ערוך</button>
+                        <button [disabled]='formInfo.form.invalid || !validatedUserName || !validatedSocialNumber || !validatedEmail || isFuture' *ngIf='editMode[item.id] && !updateMode[item.id]' (click)='saveChanges(item)'>שמור</button>
+                        <button *ngIf='!updateMode[item.id]' (click)='deleteUser(item)' [disabled]='item.id == myUser.id'>מחק</button>
+                        <img *ngIf='updateMode[item.id]' src="/assets/images/loading2.gif" style='width: 50px;'>
+                    </td>
+                </tr>
+            </table>
+        </form>
+        <div *ngIf='!pageLoad && !errorPage'>
+            <img src="/assets/images/loading2.gif">
+        </div>
+        <div *ngIf='errorPage' style="background-color: rgba(255, 255, 255, 0.8);">
+            <span dir='rtl' style='color: red; font-size: x-large; font-weight: bold;'>שגיאה!</span>
+        </div>
+    </div>
+</div>

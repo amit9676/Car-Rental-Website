@@ -1,0 +1,10 @@
+div{
+    height: 100%;
+    margin: 0;
+}
+p{
+    color: white;
+    position: relative;
+    top: 20%;
+    margin: 0;
+}

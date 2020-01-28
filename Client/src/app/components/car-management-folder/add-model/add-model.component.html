@@ -1,0 +1,21 @@
+<div class='add-screen'>
+        <div class="add-box">
+            <h3 style='text-align: center; margin-bottom: 10px;'>הוסף דגם</h3>
+            <span style='margin-right: 14px; font-weight: bold;'>בחר יצרן: </span><br>
+            <select #manufactor (input)='getModelValue(manufactor)' class="form-control" style='width: 30%; margin-right: 14px;'>
+                <option [value]='item.id' *ngFor='let item of allManufactors'>{{item.manufactor}}</option>
+            </select>
+            <br><br>
+            <input (input)='checkModelValidation()' maxlength="20" [(ngModel)]='modelName' placeholder="הכנס שם דגם" style='width: 95%; margin-right: 15px; margin-bottom: 15px;' type='text' class='form-control'>
+            <br><br>
+            <div *ngIf='existingModel' style='text-align: center;'>
+                <span style='color: red; font-weight: bold;'>דגם זה כבר נמצא ביצרן זה</span>
+            </div>
+            <br><br>
+            <button  routerLink='/car-manager/manage-models/models-table' style='width: 30%; height: 35px; position: relative; right: 2%;' class='form-control'>חזור</button>
+            <button *ngIf='loadPage' title='הוסף' (click)='addModel()'  [disabled]='!allManufactors || existingModel || !modelName || !allModels' style='width: 30%; height: 35px; color: white; position: relative; right: 38%;' class='form-control'>הוסף</button>
+            <img *ngIf='!loadPage && !errorPage' style="position: relative; width:10%; right: 50%; transform: translateX(50%);" src="/assets/images/loading2.gif">
+            <span *ngIf='errorPage' dir='rtl' style='color: red; font-size: x-large; font-weight: bold;
+            position: relative; width:7%; right: 50%; transform: translateX(50%);'>שגיאה!</span>
+        </div>
+    </div>

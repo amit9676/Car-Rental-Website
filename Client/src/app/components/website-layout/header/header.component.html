@@ -1,0 +1,40 @@
+<div class='headerDiv'>
+        <section>
+            <main>
+                <div dir='rtl' style='width: 100%; height: 100%;'>
+                    <a routerLink='/main'>
+                        <img  src='/assets/images/carLogo.png' width="100px" style="position: relative;  transform: translateY(-50%); top: 50%;">
+                        <span style="position: relative;  font-size: 30px; transform: translateY(-50%); top: 5%;">CAR4U</span>
+                    </a>
+                    <a routerLink='/main' routerLinkActive='active' style="position: relative; right: 3%; font-size: 20px; transform: translateY(-50%); top: 5%;">ראשי</a>
+                    <a routerLink='/cars' routerLinkActive='active' style="position: relative; right: 6%; font-size: 20px; transform: translateY(-50%); top: 5%;">חיפוש רכב</a>
+            
+                    <a routerLink='/contact-us' routerLinkActive='active' style="position: relative; right: 9%; font-size: 20px; transform: translateY(-50%); top: 5%;">צור קשר</a>
+                    <a *ngIf='loggedUser &&( loggedUser.rank.rank == "עובד" || loggedUser.rank.rank == "מנהל")' routerLink='/car-return' routerLinkActive='active' style="position: relative; right: 12%; font-size: 20px; transform: translateY(-50%); top: 5%;">החזר רכב</a>
+                    <a *ngIf='loggedUser && loggedUser.rank.rank == "מנהל"' routerLink='/orders-manager' routerLinkActive='active' style="position: relative; right: 15%; font-size: 19px; transform: translateY(-50%); top: 5%;">נהל הזמנות</a>
+                    <a *ngIf='loggedUser && loggedUser.rank.rank == "מנהל"'  routerLink='/car-manager' routerLinkActive='active' style="position: relative; right: 18%; font-size: 20px; transform: translateY(-50%); top: 5%;">נהל רכבים</a>
+                    <a *ngIf='loggedUser && loggedUser.rank.rank == "מנהל"' routerLink='/user-manager' routerLinkActive='active' style="position: relative; right: 21%; font-size: 20px; transform: translateY(-50%); top: 5%;">נהל משתמשים</a>
+                </div>
+            </main>
+            <aside>
+                <div dir='rtl' style='width: 100%; height: 100%; '>
+                    <div *ngIf='!loggedUser' style='width: 100%; height: 100%;'>
+                        <a routerLink='/sign-in' routerLinkActive='active' style="position: relative; font-size: 20px; transform: translateY(-50%); top: 30%;">התחבר</a>
+            
+                        <span style="position: relative; right: 9%; font-size: 20px; transform: translateY(-50%); top: 30%;">|</span>
+            
+                        <a routerLink='/sign-up' routerLinkActive='active' style="position: relative; right: 18%; font-size: 20px; transform: translateY(-50%); top: 30%;">הירשם</a>
+                    </div>
+                    <div *ngIf='loggedUser' style='width: 100%; height: 100%; position: relative; top: 50%; transform: translateY(-50%);'>
+            
+                        <a routerLink='/personal-zone'>
+                            <img class='profilePic' *ngIf='loggedUser.image' title='{{loggedUser.userName}}'  src='http://localhost:57250/Uploads/{{loggedUser.image}}' style="position: relative; right: 19%; top: 24%;  margin-left: 20px;">
+                            <img *ngIf='!loggedUser.image' title='{{loggedUser.userName}}'  src='/assets/images/userIcon.png' width="70px" style="position: relative; right: 15%; top: 20%;">
+                        </a>
+            
+                        <a (click)='logOut()' routerLink='/sign-upp' routerLinkActive='active' style="position: relative; right: 15.5%; font-size: 20px; transform: translateY(-50%); top: 25%;">התנתק</a>
+                    </div>
+                </div>
+            </aside>
+        </section>
+</div>

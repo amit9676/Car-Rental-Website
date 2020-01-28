@@ -1,0 +1,16 @@
+<div class='add-screen'>
+    <div class="add-box">
+        <h3 style='text-align: center; margin-bottom: 20px;'>הוסף יצרן</h3>
+        <input (input)='checkManufactorValidation()' maxlength="20" [(ngModel)]='manufactorName' placeholder="הכנס שם יצרן" style='width: 95%; margin-right: 15px;' type='text' class='form-control'>
+        <br><br>
+        <div *ngIf='existingManufactor' style='text-align: center;'>
+            <span style='color: red; font-weight: bold;'>יצרן זה כבר קיים במערכת</span>
+        </div>
+        <br><br>
+        <button routerLink='/car-manager/manage-manufactors/manufactors-table' style='width: 30%; height: 35px; position: relative; right: 2%;' class='form-control'>חזור</button>
+        <button *ngIf='loadPage' (click)='addManufactor()' title='הוסף' [disabled]='!manufactorName || existingManufactor || !allManufactors' style='width: 30%; height: 35px; color: white; position: relative; right: 38%;' class='form-control'>הוסף</button>
+        <img *ngIf='!loadPage && !errorPage' style="position: relative; width:10%; right: 50%; transform: translateX(50%);" src="/assets/images/loading2.gif">
+        <span *ngIf='errorPage' dir='rtl' style='color: red; font-size: x-large; font-weight: bold;
+        position: relative; width:7%; right: 50%; transform: translateX(50%);'>שגיאה!</span>
+    </div>
+</div>

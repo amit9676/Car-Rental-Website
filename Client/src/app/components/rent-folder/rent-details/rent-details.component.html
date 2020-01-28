@@ -1,0 +1,144 @@
+<div *ngIf='!loadPage' class='CarRentDate'>
+    <img src="/assets/images/loading2.gif" style="position: relative; width: 50%; height: 50%; transform: translateY(50%);">
+</div>
+
+<div dir='rtl' *ngIf='loadPage && !addedOrder' class='CarRentDate'>
+    <div style='position: relative; top: 15%; transform: translateY(-50%);'>
+        <table style='border-spacing: 30px;'>
+            <tr>
+                <th>
+                    <span style='font-size: larger; font-weight: bold;'>התחלת השכרה</span>
+                    <br><br>
+                    <span>בחר תאריך</span>
+                    <br>
+                    <input [disabled]='rentCondition == 4' #start (input)='getRentPrice(start, end)' type='date' class='form-control' value='{{dateManager.getYear(today)}}-{{dateManager.getMonth(today)}}-{{dateManager.getDay(today)}}'>
+                </th>
+
+                <th>    
+                    <span style='font-size: larger; font-weight: bold;'>סיום השכרה<span style='color: rgb(72, 101, 145); font-size: 12px;' title='תאריך סיום ההשכרה לא כולל את היום האחרון! ההחזרה היא בחצות.'>(לא כולל את יום ההחזרה)</span></span>
+                    <br><br>
+                    <span>בחר תאריך</span>
+                    <br>
+                    <input title='תאריך סיום ההשכרה לא כולל את היום האחרון! ההחזרה היא בחצות.' [disabled]='rentCondition == 4' #end (input)='getRentPrice(start, end)' max="2999-12-31" type='date' class='form-control' value='{{dateManager.getYear(tommorow)}}-{{dateManager.getMonth(tommorow)}}-{{dateManager.getDay(tommorow)}}'>
+                </th>
+            </tr>
+        </table>
+    </div>
+
+    <div *ngIf='rentCondition == 1'>
+        <span style='font-size: xx-large; font-weight: bold; color: rgb(101, 194, 82)'>הרכב פנוי להשכרה</span>
+        <br>
+        <table>
+            <tr>
+                <td>
+                    <span class='title'>עלות יומית:</span>
+                </td>
+                <td>
+                    <span>₪{{oneCar.dailyRent}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span class='title'>עלות יום איחור:</span>
+                </td>
+                <td>
+                    <span>₪{{oneCar.lateRent}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span class='title'>ימי השכרה:</span>
+                </td>
+                <td>
+                    <span>{{numOfDays}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span class='title'>סכום השכרה כולל:</span>
+                </td>
+                <td>
+                    <span>₪{{rentPrice}}</span>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div *ngIf='rentCondition == 2'>
+        <span style='font-size: xx-large; font-weight: bold; color: rgb(201, 43, 43); text-align: center;'>תאריך לא חוקי</span>
+        <div style='text-align: right;'>
+            <br>
+            <span class='dateDetails'>* ההשכרה לא יכולה להתרחש בתאריך שכבר עבר.</span>
+            <span class='dateDetails'>* תאריך תחילת ההשכרה לא יכול להיות אחרי או ביום סיום ההשכרה.</span>
+            <span class='dateDetails'>* ייתכן שחסר מידע או שהתאריך שהוזן באחד השדות אינו חוקי.</span>
+        </div>
+    </div>
+
+    <div *ngIf='rentCondition == 3'>
+            <span style='font-size: xx-large; font-weight: bold; color: rgb(201, 43, 43); text-align: center;'>הרכב מושכר בין התאריכים:</span>
+            <div class='rentedDates' style='text-align: right; height: 220px;'>
+                <br>
+                <span class='dateDetails' *ngFor='let item of orders'>
+                    <span *ngIf='item.actualEndDate'>{{item.actualEndDate | date:'dd.MM.yyyy'}} - {{item.startDate | date:'dd.MM.yyyy'}}</span>
+                    <span *ngIf='!item.actualEndDate'>{{item.endDate | date:'dd.MM.yyyy'}} - {{item.startDate | date:'dd.MM.yyyy'}}</span>
+                </span>
+            </div>
+    </div>
+
+    <div *ngIf='rentCondition == 4'>
+        <span style='font-size: xx-large; font-weight: bold; color: rgb(201, 43, 43); text-align: center;'>רכב זה אינו תקין להשכרה!</span>
+    </div>
+
+    <div class='nonUser' *ngIf='!orderingUser'>
+        <span style='font-size: x-large; font-weight: bold; color: rgb(201, 43, 43); text-align: center;'>יש להתחבר על מנת לבצע השכרה!</span>
+    </div>
+
+    <button class='form-control' [disabled]='!(rentCondition == 1) || !orderingUser' (click)='addOrder()'>השכר</button>
+</div>
+
+<div dir='rtl' *ngIf='sucsessRent' class='CarRentDate'>
+    <span style='font-size: xx-large; font-weight: bold; color: rgb(101, 194, 82)'>ההזמנה בוצעה בהצלחה!</span>
+    <br><br>
+    <table>
+        <tr>
+            <td>
+                <span class='title'>מספר הזמנה:</span>
+            </td>
+            <td>
+                <span>{{addedOrder.id}}</span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <span class='title'>תחילת השכרה:</span>
+            </td>
+            <td>
+                <span>{{addedOrder.startDate | date:'dd.MM.yyyy'}}</span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <span class='title'>סיום השכרה:</span>
+            </td>
+            <td>
+                <span>{{addedOrder.endDate | date:'dd.MM.yyyy'}}</span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <span class='title'>מספר רכב:</span>
+            </td>
+            <td>
+                <span>{{addedOrder.orderedCar.carNum}}</span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <span class='title'>סכום השכרה כולל:</span>
+            </td>
+            <td>
+                <span>₪{{dateManager.getDaysDifference(addedOrder.startDate, addedOrder.endDate) * addedOrder.orderedCar.dailyRent}}</span>
+            </td>
+        </tr>
+    </table>
+</div>

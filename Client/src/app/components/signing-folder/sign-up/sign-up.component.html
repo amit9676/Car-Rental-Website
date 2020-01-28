@@ -1,0 +1,75 @@
+<div style='height: 10%;'>
+    <section>
+        
+        <main>
+            <a routerLink="/sign-up" routerLinkActive='active'>
+                <div class='menu'>
+                    <span style='color: rgb(4, 7, 49);'>הירשם</span>
+            </div>
+            </a>
+        </main>
+
+        <main>
+            <a routerLink="/sign-in" routerLinkActive='active'>
+                <div class='menu'>
+                        <span style=' color: rgb(4, 7, 49);'>התחבר</span>
+                </div>
+            </a>
+            
+        </main>
+    </section>
+</div>
+
+<div style='height: 90%; width: 100%;'>
+    <div dir='rtl' class='signUpDiv'>
+        <form #formInfo='ngForm'>
+            <h3 style='font-weight: bold; text-align:center;'>הרשמה</h3>
+            <br>
+            <span style='margin: 10px; font-size: large; position: relative;'>שם משתמש: </span>
+            <span style='margin: 10px; font-size: large; position: relative; right: 31%;'>סיסמא: </span>
+            <br>
+            <input [disabled]='!loadPage' (input)='validatedUserName = userHandler.checkUserName(allUsers, user.userName)' [(ngModel)]='user.userName' name='userName' required maxlength="30" type='text' style='width: 35%; position: relative; margin-right: 10px;' class='form-control'>
+            <input [(ngModel)]='user.password' name='password' required type='password' style='width: 35%; position: relative; margin-right: 10px; right: 10%; ' class='form-control'>
+            
+            <br><br>
+            <span style='margin: 10px; font-size: large; position: relative;'>שם פרטי: </span>
+            <span style='margin: 10px; font-size: large; position: relative; right: 17.5%;'>שם משפחה: </span>
+            <span style='margin: 10px; font-size: large; position: relative; right: 31.5%;'>תעודת זהות: </span>
+            <br>
+            <input [(ngModel)]='user.firstName' name='firstName' required maxlength="30" type='text' style='width: 25%; position: relative; margin-right: 10px;' class='form-control'>
+            <input [(ngModel)]='user.lastName' name='lastName' required maxlength="30" type='text' class="form-control" style='width: 25%; position: relative; margin-right: 10px; right: 3%;'>
+            <input [disabled]='!loadPage' placeholder='יש להכניס 9 ספרות' (input)='validatedSocialNumber = userHandler.checkSocialNumber(allUsers, user.socialNumber)' [(ngModel)]='user.socialNumber' name='socialNumber' required type='tel' pattern="[0-9]{9}" class="form-control" style='width: 25%; position: relative; margin-right: 10px; right: 6%;'>
+            <br><br>
+            <span style='margin: 10px; font-size: large; position: relative;'>אימייל: </span>
+            <span style='margin: 10px; font-size: large; position: relative; right: 20%;'>*תאריך לידה: </span>
+            <span style='margin: 10px; font-size: large; position: relative; right: 34%;'>מין: </span>
+            <br>
+            <input [disabled]='!loadPage' placeholder='דוגמא: a@b.com/co.il' (input)='validatedEmail = userHandler.checkEmail(allUsers, user.email)' [(ngModel)]='user.email' name='email' required maxlength="100" type='text' pattern="^\w*@{1}\w*(.com|.co.il)$" class="form-control" style='width: 25%; position: relative; margin-right: 10px;'>
+            <input (input)='isFuture = dateManager.checkDate(user.dateOfBirth)' [(ngModel)]='user.dateOfBirth' name='b-day' type='date' class="form-control" style='width: 25%; position: relative; margin-right: 10px; right: 3%;'>
+            <select #gender required style='width: 25%; position: relative; margin-right: 10px; right: 6%;' class='form-control'>
+                <option value='1'>זכר</option>
+                <option value='2'>נקבה</option>
+            </select>
+            <br><br>
+            <span style='margin: 10px; font-size: large; position: relative;'>*תמונה: </span>
+            <input type="file" accept="image/*" (change)='files = imageService.onFileSelect($event)'>
+        
+            <span style='font-size: small; position: relative; top: 13px;'>* - שדה לא חובה</span>
+            <br><br>
+            <div style='text-align: center; position: relative; bottom: 15%;'>
+                <span *ngIf='isFuture'  style='color: red; text-align: center;'>תאריך לידה לא יכול להיות בעתיד</span>
+                <br *ngIf='isFuture'>
+                <span *ngIf='!validatedUserName'  style='color: red; text-align: center;'>שם משתמש זה כבר נמצא בשימוש</span>
+                <br *ngIf='!validatedUserName'>
+                <span *ngIf='!validatedEmail'  style='color: red; text-align: center;'>אימייל זה כבר נמצא בשימוש</span>
+                <br *ngIf='!validatedEmail'>
+                <span *ngIf='!validatedSocialNumber'  style='color: red; text-align: center;'>תעודת זהות זו כבר נמצאת בשימוש</span>
+            </div>
+            <button *ngIf='loadPage' (click)='addUser(gender)' [disabled]="formInfo.form.invalid || !validatedUserName || !validatedSocialNumber || !validatedEmail || isFuture" class='form-control'>הירשם</button>
+            <img *ngIf='!loadPage && !errorPage' src="/assets/images/loading2.gif" style="position: relative; right: 50%; transform: translateX(50%); width: 7%;">
+            <div *ngIf='errorPage' style='position: relative; right: 50%; transform: translateX(50%); width:8%;'>
+                <span  dir='rtl' style='color: red; font-size: x-large; font-weight: bold;'>שגיאה!</span>
+            </div>
+        </form>
+    </div>
+</div>

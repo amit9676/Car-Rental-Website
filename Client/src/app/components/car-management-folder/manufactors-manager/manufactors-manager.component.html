@@ -1,0 +1,47 @@
+<div class='manufactorsScreen'>
+        <section>
+            
+            <header>
+                <div dir='rtl' style='width: 30%; height: 95%; position: relative; left: 50%; top: 5%; transform: translateX(-50%); background-color: rgba(220,220,220,0.7);'>
+                    <span style='position: relative; top: 20%; 
+                    color: rgb(22, 47, 85); font-weight: bold;'>חפש: </span>
+                    <input (input)='manufactorFilter()' [(ngModel)]='searchValue' placeholder="חפש יצרן" style='width: 85%; position: relative; top: 15%;' type="text">
+                </div>
+            </header>
+            <main>
+                <div class='manufactorsDiv'>
+                    <table>
+                        <th>יצרן</th>
+                        <th>אפשרויות</th>
+                        <tr *ngFor='let item of presentedManufactors'>
+                            <td>
+                                <span *ngIf='!editMode[item.id]'>{{item.manufactor}}</span>
+                                <input (input)='checkManufactorValidation(item)' maxlength="20" *ngIf='editMode[item.id]' type='text' [(ngModel)]='manufactorValue'>
+                                <br *ngIf='editMode[item.id] && existingManufactor'>
+                                <span *ngIf='editMode[item.id] && existingManufactor' style='color: red; font-weight: bold; font-size: 15px;'>יצרן זה כבר קיים במערכת</span>
+                            </td>
+                            <td>
+                                <button *ngIf='!editMode[item.id] && !updateMode[item.id]' (click)='convertToInput(item)'>ערוך</button>
+                                <button [disabled]='!manufactorValue || existingManufactor' (click)='saveChanges(item)' *ngIf='editMode[item.id] && !updateMode[item.id]'>שמור</button>
+                                <br *ngIf='!updateMode[item.id]'>
+                                <button *ngIf='!updateMode[item.id]' (click)='deleteManufactor(item)'>מחק</button>
+                                <img *ngIf='updateMode[item.id]' src="/assets/images/loading2.gif" style='width: 50px;'>
+                            </td>
+                        </tr>
+                    </table>
+                    <div *ngIf='!pageLoad && !errorPage'>
+                        <img src="/assets/images/loading2.gif">
+                    </div>
+                    <div *ngIf='errorPage' style="background-color: rgba(255, 255, 255, 0.8);">
+                        <span dir='rtl' style='color: red; font-size: x-large; font-weight: bold;'>שגיאה!</span>
+                    </div>
+                </div>
+            </main>
+            <footer>
+                <div style='width: 50%; height: 85%; position: relative; left: 50%; transform: translateX(-50%);  background-color: rgba(220,220,220,0.3);'>
+                    <button routerLink='/car-manager/manage-manufactors/add-manufactor' class='form-control' style='position: relative; top: 5%; transform: translateX(-50%); left: 50%'>הוסף יצרן</button>
+                </div>
+            </footer>
+        </section>
+    </div>
+    

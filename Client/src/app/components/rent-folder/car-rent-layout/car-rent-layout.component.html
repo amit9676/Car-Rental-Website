@@ -1,0 +1,35 @@
+<section>
+    <header>
+        <div class='carName'>
+                 <span *ngIf='oneCar' class='carsNameSpan'>{{oneCar.manufactor.manufactor}} {{oneCar.model.model}}</span>
+        </div>
+    </header>
+    <footer>
+            <div *ngIf='loadPage' style='height: 100%; width: 100%;'>
+                 <img *ngIf='oneCar.picture' src='http://localhost:57250/Uploads/{{oneCar.picture}}'>
+                 <img *ngIf='!oneCar.picture' src='/assets/images/noImage.jpg'>
+            </div>
+            <div *ngIf='!loadPage && !errorPage' dir='rtl' style='height: 100%; width: 100%;'>
+                <img src="/assets/images/loading2.gif" style="position: relative; width: 50%; height: 50%;">
+            </div>
+    </footer>
+    <main>
+            <div *ngIf='loadPage' style='height: 90%; width: 100%; position: relative; top: 50%; transform: translateY(-50%);'> <router-outlet></router-outlet></div>
+            <div *ngIf='!loadPage && !errorPage' style='height: 90%; width: 100%; position: relative; top: 50%; transform: translateY(-50%); background-color: rgba(240,240,240,0.9);'>
+                <img src="/assets/images/loading2.gif" style="position: relative; width: 50%; height: 50%;">
+            </div>
+            <div *ngIf='errorPage' style='height: 90%; width: 100%; position: relative; top: 50%; transform: translateY(-50%); background-color: rgba(240,240,240,0.9);'>
+                <span  dir='rtl' style='color: red; font-size: x-large; font-weight: bold; position: relative; ;top: 25%;'>שגיאה!</span>
+             </div>
+    </main>
+    
+    
+    <aside>
+            <div style='height: 100%; width: 100%; background-color: rgba(180,180,180,0.9);'>
+                <img *ngIf='!loadPage && !errorPage' src="/assets/images/loading2.gif" style="position: relative; width: 50px; height: 50px; top: 10%; ">
+                <a *ngIf='loadPage' routerLink='/rent-car/{{oneCar.id}}/details' routerLinkActive='active'>פרטי רכב</a>
+                <a *ngIf='loadPage && oneCar.functional' routerLink="/rent-car/{{oneCar.id}}/rent-details" routerLinkActive='active'>השכרה</a>
+                <a *ngIf='loadPage' routerLink='/rent-car/{{oneCar.id}}/branch-pickup' routerLinkActive='active'>סניף איסוף</a>
+            </div>
+    </aside>
+</section>

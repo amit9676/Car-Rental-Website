@@ -1,0 +1,42 @@
+<div style='height: 10%;'>
+    <section>
+        
+        <main>
+            <a routerLink="/sign-up" routerLinkActive='active'>
+                <div class='menu' style='color: rgb(4, 7, 49);'>
+                    <span>הירשם</span>
+            </div>
+            </a>
+        </main>
+
+        <main>
+            <a routerLink="/sign-in" routerLinkActive='active'>
+                <div class='menu'>
+                        <span style='color: rgb(4, 7, 49);'>התחבר</span>
+                </div>
+            </a>
+            
+        </main>
+    </section>
+</div>
+
+<div style='height: 90%; width: 100%;'>
+    <div class="signInDiv">
+        <h3 style='text-align: center; font-weight: bold; margin-bottom: 20px;'>התחברות</h3>
+        <span style='margin-right: 15px; position: relative;'>שם משתמש: </span>
+        <span style='margin-right: 15px; position: relative; right: 31%;'>סיסמא: </span>
+        <br>
+        <input [(ngModel)]='userName' (input)='wrongCardentials = false' type='text' style='width: 35%; position: relative; margin-right: 10px;' class='form-control'>
+        <input [(ngModel)]='password' (input)='wrongCardentials = false' type='password' style='width: 35%; position: relative; margin-right: 10px; right: 10%; ' class='form-control'>
+        <br><br>
+        <div style='text-align: center; position: relative; bottom: 15%;'>
+            <span *ngIf='wrongCardentials'  style='color: red; text-align: center;'>שם משתמש או סיסמא אינם נכונים</span>
+        </div>
+        <br *ngIf='loadPage'>
+        <button *ngIf='loadPage' (click)='logIn()' style='width: 70%; height: 35px; margin-bottom: 5px; background-color: rgb(90, 196, 90); color: white; position: relative; right: 17%; top: 20%;' class='form-control'>התחבר</button>
+        <img *ngIf='!loadPage && !errorPage' src="/assets/images/loading2.gif" style="position: relative; right: 50%; transform: translateX(50%); width: 7%;">
+        <div *ngIf='errorPage' style='position: relative; right: 50%; transform: translateX(50%); width:8%;'>
+            <span  dir='rtl' style='color: red; font-size: x-large; font-weight: bold;'>שגיאה!</span>
+        </div>
+    </div>
+</div>

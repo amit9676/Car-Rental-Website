@@ -1,0 +1,11 @@
+.detailOfCarRent{
+    height: 100%;
+    width: 100%;
+    background-color: rgba(240,240,240,0.9);
+}
+
+span{
+    font-weight: bold;
+    font-size: xx-large;
+    color: rgb(22, 47, 85);
+}

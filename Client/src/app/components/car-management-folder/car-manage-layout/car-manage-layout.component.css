@@ -1,0 +1,61 @@
+section
+{
+    height: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 10% 90%;
+}
+
+header{
+    grid-column: span 12;
+}
+
+aside{
+    grid-column: span 1;
+}
+
+main{
+    grid-column: span 11;
+}
+
+.carTable{
+    height: 100%;
+    width: 100%;
+    background-color: rgba(220,220,220,0.7);
+}
+
+img{
+    position: relative;
+    width: 75%;
+    height: 75%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.carsTableSpan{
+    position: relative;
+    font-size: 30px;
+    font-weight: bold;
+    color: rgb(22, 47, 85);
+    top: 10%;
+}
+
+a
+{
+    display:block;
+    position: relative;
+    font-size: large;
+    font-weight: bold;
+    padding-top: 20%;
+    padding-bottom: 20%;
+}
+
+.active
+{
+    
+    font-weight: bold;
+    background-color: rgba(255,255,255,0.4);
+    
+}

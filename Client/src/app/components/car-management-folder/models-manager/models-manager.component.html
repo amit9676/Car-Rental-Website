@@ -1,0 +1,63 @@
+<div class='modelScreen'>
+    <section>
+        
+        <header>
+            <div dir='rtl' style='text-align: right; width: 30%; height: 95%; position: relative; left: 50%; top: 5%; transform: translateX(-50%); background-color: rgba(220,220,220,0.7);'>
+                <span style='position: relative;  margin-right: 4px;
+                color: rgb(22, 47, 85); font-weight: bold;'>מיין לפי יצרן: </span>
+                <select #givenManufactor (input)='searchedManufactor = givenManufactor.value' (input)='modelFilter()' style='margin-top: 4px; width: 35%;'>
+                    <option value='All'>הכל</option>
+                    <option [value]='item.manufactor' *ngFor='let item of allManufactors'>{{item.manufactor}}</option>
+                </select>
+                <br>
+                <div style='margin-top: 10px; margin-right: 4px;'>
+                    <span style='position: relative;
+                    color: rgb(22, 47, 85); font-weight: bold;'>חפש: </span>
+                    <input (input)='modelFilter()' [(ngModel)]='searchValue' placeholder="חפש דגם" style='width: 85%; position: relative;' type="text">
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class='modelsDiv'>
+                <table>
+                    <th>דגם</th>
+                    <th>יצרן</th>
+                    <th>אפשרויות</th>
+                    <tr *ngFor='let item of presentedModels'>
+                        <td>
+                            <span *ngIf='!editMode[item.id]'>{{item.model}}</span>
+                            <input (input)='checkModelValidation(item)' maxlength="20" [(ngModel)]='modelName' *ngIf='editMode[item.id]' type='text'>
+                            <br *ngIf='editMode[item.id] && existingModel'>
+                            <span *ngIf='editMode[item.id] && existingModel' style='color: red; font-weight: bold; font-size: 15px;'>דגם זה כבר נמצא ביצרן זה</span>
+                        </td>
+                        <td>
+                            <span *ngIf='!editMode[item.id]'>{{item.manufactor.manufactor}}</span>
+                            <select #manufactor [value]='item.manufactor.manufactor' (input)='getManufactorValue(manufactor)' (input)='checkModelValidation(item)' *ngIf='editMode[item.id]'>
+                                <option [value]='item.manufactor' *ngFor='let item of allManufactors'>{{item.manufactor}}</option>
+                            </select>
+                        </td>
+                        <td>
+                            <button *ngIf='!editMode[item.id] && !updateMode[item.id]' (click)='convertToInput(item)'>ערוך</button>
+                            <button (click)='saveChanges(item)' [disabled]='!modelName || existingModel || !allManufactors' *ngIf='editMode[item.id] && !updateMode[item.id]'>שמור</button>
+                            <br *ngIf='!updateMode[item.id]'>
+                            <button *ngIf='!updateMode[item.id]' (click)='deleteModel(item)'>מחק</button>
+                            <img *ngIf='updateMode[item.id]' src="/assets/images/loading2.gif" style='width: 50px;'>
+                        </td>
+                    </tr>
+                </table>
+                <div *ngIf='!loadPage && !errorPage'>
+                    <img src="/assets/images/loading2.gif">
+                </div>
+                <div *ngIf='errorPage' style="background-color: rgba(255, 255, 255, 0.8);">
+                    <span dir='rtl' style='color: red; font-size: x-large; font-weight: bold;'>שגיאה!</span>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div style='width: 50%; height: 85%; position: relative; left: 50%; transform: translateX(-50%);  background-color: rgba(220,220,220,0.3);'>
+                <button routerLink='/car-manager/manage-models/add-model' class='form-control' style='position: relative; top: 5%; transform: translateX(-50%); left: 50%'>הוסף דגם</button>
+            </div>
+        </footer>
+    </section>
+</div>
+

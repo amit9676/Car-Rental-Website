@@ -1,0 +1,57 @@
+section
+{
+    height: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 100%;
+}
+
+main{
+    grid-column: span 6;
+}
+
+.menu{
+    height: 100%;
+    background-color: rgba(206, 195, 216, 0.5);
+}
+.active div{
+    background-color:  rgba(206, 195, 216);
+}
+
+span{
+    font-size: large;
+    font-weight: bold;
+}
+
+.signUpDiv{
+    width: 55%;
+    position: relative;
+    background-color: rgba(220,220,220,0.7);
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 15px;
+    color: rgb(22, 47, 85);
+    text-align: right;
+}
+
+.form-control{
+    display: inline;
+}
+
+button{
+    width: 75%;
+    position: relative;
+    margin-right: 10px;
+    margin-bottom: 5px;
+    right: 50%;
+    transform: translateX(50%);
+    background-color: rgb(90, 196, 90);
+    color: white;
+}
+
+button:disabled{
+    background-color: rgb(114, 187, 114);
+}

@@ -1,0 +1,29 @@
+<div style='height: 100%; width: 100%;'>
+    <div *ngIf='(myUser || myCar) && loadPage' dir='rtl' class='signUpDiv'>
+        <h3 style='font-weight: bold; text-align:center;'>שנה תמונה</h3>
+        <img *ngIf='myUser && myUser.image && !myCar' style='width: 350px; position: relative; right: 50%; transform: translateX(50%);' src='http://localhost:57250/Uploads/{{myUser.image}}'>
+        <img *ngIf='myUser && !myUser.image && !myCar' src='/assets/images/userIcon.png' style="position: relative; width: 500px; right: 18%;">
+        <img *ngIf='myCar && myCar.picture && !myUser' style='width: 350px; position: relative; right: 50%; transform: translateX(50%);' src='http://localhost:57250/Uploads/{{myCar.picture}}'>
+        <br><br>
+        <span *ngIf='!imageFile' style='margin-right: 65px; color: red;'>נא בחר תמונה</span>
+        <div style='margin-right: 65px;'>
+            
+            <input type="file" accept="image/*" (change)='imageFile = imageService.onFileSelect($event)'>
+        </div>
+        <div *ngIf='myUser' style='text-align: center;'>
+            <button (click)='updatePicture()' [disabled]='myUser.image  || !imageFile' style='width: 25%;' class='form-control'>הוסף תמונה</button>
+            <button (click)='updatePicture()' [disabled]='!myUser.image || !imageFile' style='width: 25%;' class='form-control'>שנה תמונה</button>
+            <button (click)='deletePicture()' [disabled]='!myUser.image' style='width: 25%;' class='form-control'>מחק תמונה</button>
+            <br *ngIf='returnToEditUsers'>
+            <button *ngIf='returnToEditUsers' (click)='getOutOfHeere()' class="form-control" style='width:35%;'>חזור לעריכת משתמשים</button>
+        </div>
+        <div *ngIf='myCar' style='text-align: center;'>
+            <button (click)='updatePicture()' [disabled]='!myCar.picture || !imageFile' style='width: 25%;' class='form-control'>שנה תמונה</button>
+            <br *ngIf='returnToEditCars'>
+            <button *ngIf='returnToEditCars' (click)='getOutOfHeere()' class="form-control" style='width:35%;'>חזור לעריכת רכבים</button>
+        </div>
+    </div>
+    <div *ngIf='!loadPage' dir='rtl' class='signUpDiv' style='height: 97%;'>
+        <img src="/assets/images/loading2.gif" style="position: relative; right: 50%; top: 50%; transform: translate(50%, -50%); width: 30%;">
+    </div>
+</div>

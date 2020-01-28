@@ -1,0 +1,77 @@
+<div style='width: 100%; height: 100%;'>
+    <div  class='addCar'>
+        <div dir='rtl'>
+            <form #formInfo='ngForm'>
+                <h3 style='font-weight: bold; text-align:center;'>הוסף רכב</h3>
+                <br>
+                    <span style='margin: 10px; font-size: large;'>מספר רכב: </span>
+                    <input [disabled]='!loadPage' (input)='existingCar = carHandler.checkForExistingCar(allCars, givenCarNumber)' title='יש להכניס מספר רכב הכולל 7 או 8 ספרות' [(ngModel)]='givenCarNumber' class='form-control' name='numberOfCar' required pattern="[0-9]{7,8}" style='width: 85%; margin-right: 10px;' type='tel'>
+                <br><br>
+                <span style='margin: 10px; font-size: large; position: relative;'>יצרן: </span>
+                <span style='margin: 10px; font-size: large; position: relative; right: 22%;'>דגם: </span>
+                <span style='margin: 10px; font-size: large; position: relative; right: 44%;'>סוג רכב: </span>
+                <br>
+                <select #manufactor required (input)='givenManufactor = carHandler.getManufactorValue(manufactor)' (input)='presentedModels = carHandler.getManufactorModels(allModels, allManufactors, givenManufactor);' name='carManufactor' style='width: 25%; position: relative; margin-right: 10px;' class='form-control'>
+                    <option *ngFor='let item of allManufactors' [value]='item.id'>{{item.manufactor}}</option>
+                </select>
+                <select #model required style='width: 25%; position: relative; margin-right: 10px; right: 3%; ' class='form-control'>
+                    <option *ngFor='let item of presentedModels' [value]='item.id'>{{item.model}}</option>
+                </select>
+                <select #design required style='width: 25%; position: relative; margin-right: 10px; right: 6%;' class='form-control'>
+                    <option *ngFor='let item of allDesigns' [value]='item.id'>{{item.design}}</option>
+                </select>
+                <br><br>
+                <span style='margin: 10px; font-size: large; position: relative;'>גיר: </span>
+                <span style='margin: 10px; font-size: large; position: relative; right: 23%;'>שנת ייצור: </span>
+                <span style='margin: 10px; font-size: large; position: relative; right: 39%;'>קילומטרז': </span>
+                <br>
+                <select #gear required name='carGear' style='width: 25%; position: relative; margin-right: 10px;' class='form-control'>
+                    <option value='1'>אוטומט</option>
+                    <option value='2'>ידני</option>
+                </select>
+                <input (input)='isFuture = carHandler.checkForFuture(givenYear)' type='number' required min='1' [(ngModel)]='givenYear' name='year' class="form-control" style='width: 25%; position: relative; margin-right: 10px; right: 3%;'>
+                <input type='number' required min='1' maxlength="10" [(ngModel)]='givenKilometrage' name='kilometrage' class="form-control" style='width: 25%; position: relative; margin-right: 10px; right: 6%;'>
+                <br><br>
+                <span style='margin: 10px; font-size: large; position: relative;'>עלות השכרה יומית: </span>
+                <span style='margin: 10px; font-size: large; position: relative; right: 6.8%;'>עלות יום איחור: </span>
+                <span style='margin: 10px; font-size: large; position: relative; right: 16%;'>תקינות: </span>
+                <br>
+                <input required min='1' [(ngModel)]='givenDayRent' name='day' type='number' class="form-control" style='width: 25%; position: relative; margin-right: 10px;'>
+                <input required min='1' [(ngModel)]='givenLateRent' name='late' type='number' class="form-control" style='width: 25%; position: relative; margin-right: 10px; right: 3%;'>
+                <select required [(ngModel)]='givenFunctionality' name='functions' style='width: 25%; position: relative; margin-right: 10px; right: 6%;' class='form-control'>
+                    <option [ngValue]='true'>תקין</option>
+                    <option [ngValue]='false'>לא תקין</option>
+                </select>
+                <br><br>
+                <span style='margin: 10px; font-size: large; position: relative;'>סניף איסוף: </span>
+                <br>
+                <select #branch style='width: 45%; position: relative; margin-right: 10px;' class='form-control'>
+                    <option *ngFor='let item of allBranches' [value]='item.id'>{{item.name}} - {{item.address}}, {{item.city}}</option>
+                </select>
+                <br><br>
+                <span style='margin: 10px; font-size: large; position: relative;'>תמונה: </span>
+                <input type="file" accept="image/*" (change)='files = imageService.onFileSelect($event)'>
+                
+                <br>
+                <div style='text-align: center; position: relative;'>
+                    <br *ngIf='!files'>
+                    <span *ngIf='!files' style='color: red; text-align: center;'>נא בחר תמונה!</span>
+                    <br *ngIf='isFuture'>
+                    <span *ngIf='isFuture' style='color: red; text-align: center;'>שנת ייצור לא יכולה להיות בעתיד!</span>
+                    <br *ngIf='existingCar'>
+                    <span *ngIf='existingCar' style='color: red; text-align: center;'>מספר רכב זה כבר קיים במערכת!</span>
+                </div>
+                <div>
+                    <button routerLink='/car-manager/manage-cars/cars-table' style='width: 25%; position: relative; margin-right: 10px;' class='form-control'>חזור</button>
+                    <button  *ngIf='loadPage' title='הוסף' (click)='addCar(manufactor, model, branch, design, gear)' [disabled]="formInfo.form.invalid || 1 > givenYear || givenYear % 1 != 0 ||
+                         0 > givenKilometrage || givenKilometrage > 1000000 || givenDayRent > 1000000 || givenLateRent > 1000000 || 1 > givenDayRent || 1 > givenLateRent || isFuture ||
+                          existingCar || !files || carHandler.getManufactorModels(allModels, allManufactors, givenManufactor).length == 0" style='width: 25%; position: relative; margin-right: 10px; margin-bottom: 5px; right: 46%; color: white;' class='form-control'>הוסף</button>
+                    <img *ngIf='!loadPage && !errorPage' style="position: relative; width:7%; right: 50%; transform: translateX(50%);" src="/assets/images/loading2.gif">
+                     <span *ngIf='errorPage' dir='rtl' style='color: red; font-size: x-large; font-weight: bold;
+                      position: relative; width:7%; right: 50%; transform: translateX(50%);'>שגיאה!</span>
+                </div>
+                
+            </form>
+        </div>
+    </div>
+</div>

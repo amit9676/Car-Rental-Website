@@ -1,0 +1,78 @@
+p{
+    color: rgb(179, 48, 48);
+    position: relative;
+    left: 40%;
+}
+
+.right{
+    position: relative;
+    top: 5%;
+    right: 5%;
+}
+
+.left{
+    position: relative;
+    top: 5%;
+    left: 5%;
+}
+
+.search{
+    position: relative;
+    top: 5%;
+    width: 300px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 3px;
+    left: 10%;
+}
+
+input, select{
+    position: relative;
+    margin: 3px;
+    width: 90%;
+    right: 4%;
+}
+
+section
+{
+    height: 100%;
+    box-sizing: border-box; /*so width and height occupy the entire space*/
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 10% 90%;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+header{
+    grid-column: span 12;
+}
+main{
+    grid-column: span 5;
+}
+
+aside{
+    grid-column: span 3;
+}
+
+footer{
+    grid-column: span 4;
+}
+
+.resultsAmountDiv{
+    height: 100%;
+    width: 100%;
+    background-color: rgba(220,220,220,0.7);
+}
+
+.resultsAmount{
+    position: relative;
+    font-size: 30px;
+    font-weight: bold;
+    color: rgb(22, 47, 85);
+    top: 10%;
+}
+
+/*input[type="date"] {
+    color: rgb(231, 125, 125);
+}*/

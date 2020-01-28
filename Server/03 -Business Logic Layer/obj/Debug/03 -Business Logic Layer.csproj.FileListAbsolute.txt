@@ -1,0 +1,323 @@
+E:\visualstudio\Final Project\01 - Data Access Layer\03 -Business Logic Layer\bin\Debug\03 -Business Logic Layer.dll.config
+E:\visualstudio\Final Project\01 - Data Access Layer\03 -Business Logic Layer\bin\Debug\03 -Business Logic Layer.dll
+E:\visualstudio\Final Project\01 - Data Access Layer\03 -Business Logic Layer\bin\Debug\03 -Business Logic Layer.pdb
+E:\visualstudio\Final Project\01 - Data Access Layer\03 -Business Logic Layer\bin\Debug\01 - Data Access Layer.dll
+E:\visualstudio\Final Project\01 - Data Access Layer\03 -Business Logic Layer\bin\Debug\02 - Data Transfer Objects.dll
+E:\visualstudio\Final Project\01 - Data Access Layer\03 -Business Logic Layer\bin\Debug\EntityFramework.dll
+E:\visualstudio\Final Project\01 - Data Access Layer\03 -Business Logic Layer\bin\Debug\EntityFramework.SqlServer.dll
+E:\visualstudio\Final Project\01 - Data Access Layer\03 -Business Logic Layer\bin\Debug\01 - Data Access Layer.pdb
+E:\visualstudio\Final Project\01 - Data Access Layer\03 -Business Logic Layer\bin\Debug\01 - Data Access Layer.dll.config
+E:\visualstudio\Final Project\01 - Data Access Layer\03 -Business Logic Layer\bin\Debug\02 - Data Transfer Objects.pdb
+E:\visualstudio\Final Project\01 - Data Access Layer\03 -Business Logic Layer\bin\Debug\EntityFramework.xml
+E:\visualstudio\Final Project\01 - Data Access Layer\03 -Business Logic Layer\bin\Debug\EntityFramework.SqlServer.xml
+E:\visualstudio\Final Project\01 - Data Access Layer\03 -Business Logic Layer\obj\Debug\03 -Business Logic Layer.csprojAssemblyReference.cache
+E:\visualstudio\Final Project\01 - Data Access Layer\03 -Business Logic Layer\obj\Debug\03 -Business Logic Layer.csproj.CoreCompileInputs.cache
+E:\visualstudio\Final Project\01 - Data Access Layer\03 -Business Logic Layer\obj\Debug\03 -Business Logic Layer.csproj.CopyComplete
+E:\visualstudio\Final Project\01 - Data Access Layer\03 -Business Logic Layer\obj\Debug\03 -Business Logic Layer.dll
+E:\visualstudio\Final Project\01 - Data Access Layer\03 -Business Logic Layer\obj\Debug\03 -Business Logic Layer.pdb
+E:\visualstudio\Final Project\Server\03 -Business Logic Layer\bin\Debug\03 -Business Logic Layer.dll.config
+E:\visualstudio\Final Project\Server\03 -Business Logic Layer\bin\Debug\03 -Business Logic Layer.dll
+E:\visualstudio\Final Project\Server\03 -Business Logic Layer\bin\Debug\03 -Business Logic Layer.pdb
+E:\visualstudio\Final Project\Server\03 -Business Logic Layer\bin\Debug\01 - Data Access Layer.dll
+E:\visualstudio\Final Project\Server\03 -Business Logic Layer\bin\Debug\02 - Data Transfer Objects.dll
+E:\visualstudio\Final Project\Server\03 -Business Logic Layer\bin\Debug\EntityFramework.dll
+E:\visualstudio\Final Project\Server\03 -Business Logic Layer\bin\Debug\EntityFramework.SqlServer.dll
+E:\visualstudio\Final Project\Server\03 -Business Logic Layer\bin\Debug\01 - Data Access Layer.pdb
+E:\visualstudio\Final Project\Server\03 -Business Logic Layer\bin\Debug\01 - Data Access Layer.dll.config
+E:\visualstudio\Final Project\Server\03 -Business Logic Layer\bin\Debug\02 - Data Transfer Objects.pdb
+E:\visualstudio\Final Project\Server\03 -Business Logic Layer\bin\Debug\EntityFramework.xml
+E:\visualstudio\Final Project\Server\03 -Business Logic Layer\bin\Debug\EntityFramework.SqlServer.xml
+E:\visualstudio\Final Project\Server\03 -Business Logic Layer\obj\Debug\03 -Business Logic Layer.csprojAssemblyReference.cache
+E:\visualstudio\Final Project\Server\03 -Business Logic Layer\obj\Debug\03 -Business Logic Layer.csproj.CoreCompileInputs.cache
+E:\visualstudio\Final Project\Server\03 -Business Logic Layer\obj\Debug\03 -Business Logic Layer.csproj.CopyComplete
+E:\visualstudio\Final Project\Server\03 -Business Logic Layer\obj\Debug\03 -Business Logic Layer.dll
+E:\visualstudio\Final Project\Server\03 -Business Logic Layer\obj\Debug\03 -Business Logic Layer.pdb
+E:\visualstudio\Final Project\Server2\03 -Business Logic Layer\bin\Debug\03 -Business Logic Layer.dll.config
+E:\visualstudio\Final Project\Server2\03 -Business Logic Layer\bin\Debug\03 -Business Logic Layer.dll
+E:\visualstudio\Final Project\Server2\03 -Business Logic Layer\bin\Debug\03 -Business Logic Layer.pdb
+E:\visualstudio\Final Project\Server2\03 -Business Logic Layer\bin\Debug\01 - Data Access Layer.dll
+E:\visualstudio\Final Project\Server2\03 -Business Logic Layer\bin\Debug\02 - Data Transfer Objects.dll
+E:\visualstudio\Final Project\Server2\03 -Business Logic Layer\bin\Debug\EntityFramework.dll
+E:\visualstudio\Final Project\Server2\03 -Business Logic Layer\bin\Debug\EntityFramework.SqlServer.dll
+E:\visualstudio\Final Project\Server2\03 -Business Logic Layer\bin\Debug\01 - Data Access Layer.pdb
+E:\visualstudio\Final Project\Server2\03 -Business Logic Layer\bin\Debug\01 - Data Access Layer.dll.config
+E:\visualstudio\Final Project\Server2\03 -Business Logic Layer\bin\Debug\02 - Data Transfer Objects.pdb
+E:\visualstudio\Final Project\Server2\03 -Business Logic Layer\bin\Debug\EntityFramework.xml
+E:\visualstudio\Final Project\Server2\03 -Business Logic Layer\bin\Debug\EntityFramework.SqlServer.xml
+E:\visualstudio\Final Project\Server2\03 -Business Logic Layer\obj\Debug\03 -Business Logic Layer.csprojAssemblyReference.cache
+E:\visualstudio\Final Project\Server2\03 -Business Logic Layer\obj\Debug\03 -Business Logic Layer.csproj.CoreCompileInputs.cache
+E:\visualstudio\Final Project\Server2\03 -Business Logic Layer\obj\Debug\03 -Business Logic Layer.csproj.CopyComplete
+E:\visualstudio\Final Project\Server2\03 -Business Logic Layer\obj\Debug\03 -Business Logic Layer.dll
+E:\visualstudio\Final Project\Server2\03 -Business Logic Layer\obj\Debug\03 -Business Logic Layer.pdb
+E:\visualstudio\Final Project\Server3\03 -Business Logic Layer\bin\Debug\03 -Business Logic Layer.dll.config
+E:\visualstudio\Final Project\Server3\03 -Business Logic Layer\bin\Debug\03 -Business Logic Layer.dll
+E:\visualstudio\Final Project\Server3\03 -Business Logic Layer\bin\Debug\03 -Business Logic Layer.pdb
+E:\visualstudio\Final Project\Server3\03 -Business Logic Layer\bin\Debug\01 - Data Access Layer.dll
+E:\visualstudio\Final Project\Server3\03 -Business Logic Layer\bin\Debug\02 - Data Transfer Objects.dll
+E:\visualstudio\Final Project\Server3\03 -Business Logic Layer\bin\Debug\EntityFramework.dll
+E:\visualstudio\Final Project\Server3\03 -Business Logic Layer\bin\Debug\EntityFramework.SqlServer.dll
+E:\visualstudio\Final Project\Server3\03 -Business Logic Layer\bin\Debug\01 - Data Access Layer.pdb
+E:\visualstudio\Final Project\Server3\03 -Business Logic Layer\bin\Debug\01 - Data Access Layer.dll.config
+E:\visualstudio\Final Project\Server3\03 -Business Logic Layer\bin\Debug\02 - Data Transfer Objects.pdb
+E:\visualstudio\Final Project\Server3\03 -Business Logic Layer\bin\Debug\EntityFramework.xml
+E:\visualstudio\Final Project\Server3\03 -Business Logic Layer\bin\Debug\EntityFramework.SqlServer.xml
+E:\visualstudio\Final Project\Server3\03 -Business Logic Layer\obj\Debug\03 -Business Logic Layer.csprojAssemblyReference.cache
+E:\visualstudio\Final Project\Server3\03 -Business Logic Layer\obj\Debug\03 -Business Logic Layer.csproj.CoreCompileInputs.cache
+E:\visualstudio\Final Project\Server3\03 -Business Logic Layer\obj\Debug\03 -Business Logic Layer.csproj.CopyComplete
+E:\visualstudio\Final Project\Server3\03 -Business Logic Layer\obj\Debug\03 -Business Logic Layer.dll
+E:\visualstudio\Final Project\Server3\03 -Business Logic Layer\obj\Debug\03 -Business Logic Layer.pdb
+E:\visualstudio\Final Project\Server4\03 -Business Logic Layer\bin\Debug\03 -Business Logic Layer.dll.config
+E:\visualstudio\Final Project\Server4\03 -Business Logic Layer\bin\Debug\03 -Business Logic Layer.dll
+E:\visualstudio\Final Project\Server4\03 -Business Logic Layer\bin\Debug\03 -Business Logic Layer.pdb
+E:\visualstudio\Final Project\Server4\03 -Business Logic Layer\bin\Debug\01 - Data Access Layer.dll
+E:\visualstudio\Final Project\Server4\03 -Business Logic Layer\bin\Debug\02 - Data Transfer Objects.dll
+E:\visualstudio\Final Project\Server4\03 -Business Logic Layer\bin\Debug\EntityFramework.dll
+E:\visualstudio\Final Project\Server4\03 -Business Logic Layer\bin\Debug\EntityFramework.SqlServer.dll
+E:\visualstudio\Final Project\Server4\03 -Business Logic Layer\bin\Debug\01 - Data Access Layer.pdb
+E:\visualstudio\Final Project\Server4\03 -Business Logic Layer\bin\Debug\01 - Data Access Layer.dll.config
+E:\visualstudio\Final Project\Server4\03 -Business Logic Layer\bin\Debug\02 - Data Transfer Objects.pdb
+E:\visualstudio\Final Project\Server4\03 -Business Logic Layer\bin\Debug\EntityFramework.xml
+E:\visualstudio\Final Project\Server4\03 -Business Logic Layer\bin\Debug\EntityFramework.SqlServer.xml
+E:\visualstudio\Final Project\Server4\03 -Business Logic Layer\obj\Debug\03 -Business Logic Layer.csprojAssemblyReference.cache
+E:\visualstudio\Final Project\Server4\03 -Business Logic Layer\obj\Debug\03 -Business Logic Layer.csproj.CoreCompileInputs.cache
+E:\visualstudio\Final Project\Server4\03 -Business Logic Layer\obj\Debug\03 -Business Logic Layer.csproj.CopyComplete
+E:\visualstudio\Final Project\Server4\03 -Business Logic Layer\obj\Debug\03 -Business Logic Layer.dll
+E:\visualstudio\Final Project\Server4\03 -Business Logic Layer\obj\Debug\03 -Business Logic Layer.pdb
+E:\visualstudio\Final Project\Server5\03 -Business Logic Layer\bin\Debug\03 -Business Logic Layer.dll.config
+E:\visualstudio\Final Project\Server5\03 -Business Logic Layer\bin\Debug\03 -Business Logic Layer.dll
+E:\visualstudio\Final Project\Server5\03 -Business Logic Layer\bin\Debug\03 -Business Logic Layer.pdb
+E:\visualstudio\Final Project\Server5\03 -Business Logic Layer\bin\Debug\01 - Data Access Layer.dll
+E:\visualstudio\Final Project\Server5\03 -Business Logic Layer\bin\Debug\02 - Data Transfer Objects.dll
+E:\visualstudio\Final Project\Server5\03 -Business Logic Layer\bin\Debug\EntityFramework.dll
+E:\visualstudio\Final Project\Server5\03 -Business Logic Layer\bin\Debug\EntityFramework.SqlServer.dll
+E:\visualstudio\Final Project\Server5\03 -Business Logic Layer\bin\Debug\01 - Data Access Layer.pdb
+E:\visualstudio\Final Project\Server5\03 -Business Logic Layer\bin\Debug\01 - Data Access Layer.dll.config
+E:\visualstudio\Final Project\Server5\03 -Business Logic Layer\bin\Debug\02 - Data Transfer Objects.pdb
+E:\visualstudio\Final Project\Server5\03 -Business Logic Layer\bin\Debug\EntityFramework.xml
+E:\visualstudio\Final Project\Server5\03 -Business Logic Layer\bin\Debug\EntityFramework.SqlServer.xml
+E:\visualstudio\Final Project\Server5\03 -Business Logic Layer\obj\Debug\03 -Business Logic Layer.csprojAssemblyReference.cache
+E:\visualstudio\Final Project\Server5\03 -Business Logic Layer\obj\Debug\03 -Business Logic Layer.csproj.CoreCompileInputs.cache
+E:\visualstudio\Final Project\Server5\03 -Business Logic Layer\obj\Debug\03 -Business Logic Layer.csproj.CopyComplete
+E:\visualstudio\Final Project\Server5\03 -Business Logic Layer\obj\Debug\03 -Business Logic Layer.dll
+E:\visualstudio\Final Project\Server5\03 -Business Logic Layer\obj\Debug\03 -Business Logic Layer.pdb
+E:\visualstudio\Final Project\Server6\03 -Business Logic Layer\bin\Debug\03 -Business Logic Layer.dll.config
+E:\visualstudio\Final Project\Server6\03 -Business Logic Layer\bin\Debug\03 -Business Logic Layer.dll
+E:\visualstudio\Final Project\Server6\03 -Business Logic Layer\bin\Debug\03 -Business Logic Layer.pdb
+E:\visualstudio\Final Project\Server6\03 -Business Logic Layer\bin\Debug\01 - Data Access Layer.dll
+E:\visualstudio\Final Project\Server6\03 -Business Logic Layer\bin\Debug\02 - Data Transfer Objects.dll
+E:\visualstudio\Final Project\Server6\03 -Business Logic Layer\bin\Debug\EntityFramework.dll
+E:\visualstudio\Final Project\Server6\03 -Business Logic Layer\bin\Debug\EntityFramework.SqlServer.dll
+E:\visualstudio\Final Project\Server6\03 -Business Logic Layer\bin\Debug\01 - Data Access Layer.pdb
+E:\visualstudio\Final Project\Server6\03 -Business Logic Layer\bin\Debug\01 - Data Access Layer.dll.config
+E:\visualstudio\Final Project\Server6\03 -Business Logic Layer\bin\Debug\02 - Data Transfer Objects.pdb
+E:\visualstudio\Final Project\Server6\03 -Business Logic Layer\bin\Debug\EntityFramework.xml
+E:\visualstudio\Final Project\Server6\03 -Business Logic Layer\bin\Debug\EntityFramework.SqlServer.xml
+E:\visualstudio\Final Project\Server6\03 -Business Logic Layer\obj\Debug\03 -Business Logic Layer.csprojAssemblyReference.cache
+E:\visualstudio\Final Project\Server6\03 -Business Logic Layer\obj\Debug\03 -Business Logic Layer.csproj.CoreCompileInputs.cache
+E:\visualstudio\Final Project\Server6\03 -Business Logic Layer\obj\Debug\03 -Business Logic Layer.csproj.CopyComplete
+E:\visualstudio\Final Project\Server6\03 -Business Logic Layer\obj\Debug\03 -Business Logic Layer.dll
+E:\visualstudio\Final Project\Server6\03 -Business Logic Layer\obj\Debug\03 -Business Logic Layer.pdb
+E:\visualstudio\Final Project\Server7\03 -Business Logic Layer\bin\Debug\03 -Business Logic Layer.dll.config
+E:\visualstudio\Final Project\Server7\03 -Business Logic Layer\bin\Debug\03 -Business Logic Layer.dll
+E:\visualstudio\Final Project\Server7\03 -Business Logic Layer\bin\Debug\03 -Business Logic Layer.pdb
+E:\visualstudio\Final Project\Server7\03 -Business Logic Layer\bin\Debug\01 - Data Access Layer.dll
+E:\visualstudio\Final Project\Server7\03 -Business Logic Layer\bin\Debug\02 - Data Transfer Objects.dll
+E:\visualstudio\Final Project\Server7\03 -Business Logic Layer\bin\Debug\EntityFramework.dll
+E:\visualstudio\Final Project\Server7\03 -Business Logic Layer\bin\Debug\EntityFramework.SqlServer.dll
+E:\visualstudio\Final Project\Server7\03 -Business Logic Layer\bin\Debug\01 - Data Access Layer.pdb
+E:\visualstudio\Final Project\Server7\03 -Business Logic Layer\bin\Debug\01 - Data Access Layer.dll.config
+E:\visualstudio\Final Project\Server7\03 -Business Logic Layer\bin\Debug\02 - Data Transfer Objects.pdb
+E:\visualstudio\Final Project\Server7\03 -Business Logic Layer\bin\Debug\EntityFramework.xml
+E:\visualstudio\Final Project\Server7\03 -Business Logic Layer\bin\Debug\EntityFramework.SqlServer.xml
+E:\visualstudio\Final Project\Server7\03 -Business Logic Layer\obj\Debug\03 -Business Logic Layer.csprojAssemblyReference.cache
+E:\visualstudio\Final Project\Server7\03 -Business Logic Layer\obj\Debug\03 -Business Logic Layer.csproj.CoreCompileInputs.cache
+E:\visualstudio\Final Project\Server7\03 -Business Logic Layer\obj\Debug\03 -Business Logic Layer.csproj.CopyComplete
+E:\visualstudio\Final Project\Server7\03 -Business Logic Layer\obj\Debug\03 -Business Logic Layer.dll
+E:\visualstudio\Final Project\Server7\03 -Business Logic Layer\obj\Debug\03 -Business Logic Layer.pdb
+E:\visualstudio\Final Project\Server8\03 -Business Logic Layer\bin\Debug\03 -Business Logic Layer.dll.config
+E:\visualstudio\Final Project\Server8\03 -Business Logic Layer\bin\Debug\03 -Business Logic Layer.dll
+E:\visualstudio\Final Project\Server8\03 -Business Logic Layer\bin\Debug\03 -Business Logic Layer.pdb
+E:\visualstudio\Final Project\Server8\03 -Business Logic Layer\bin\Debug\01 - Data Access Layer.dll
+E:\visualstudio\Final Project\Server8\03 -Business Logic Layer\bin\Debug\02 - Data Transfer Objects.dll
+E:\visualstudio\Final Project\Server8\03 -Business Logic Layer\bin\Debug\EntityFramework.dll
+E:\visualstudio\Final Project\Server8\03 -Business Logic Layer\bin\Debug\EntityFramework.SqlServer.dll
+E:\visualstudio\Final Project\Server8\03 -Business Logic Layer\bin\Debug\01 - Data Access Layer.pdb
+E:\visualstudio\Final Project\Server8\03 -Business Logic Layer\bin\Debug\01 - Data Access Layer.dll.config
+E:\visualstudio\Final Project\Server8\03 -Business Logic Layer\bin\Debug\02 - Data Transfer Objects.pdb
+E:\visualstudio\Final Project\Server8\03 -Business Logic Layer\bin\Debug\EntityFramework.xml
+E:\visualstudio\Final Project\Server8\03 -Business Logic Layer\bin\Debug\EntityFramework.SqlServer.xml
+E:\visualstudio\Final Project\Server8\03 -Business Logic Layer\obj\Debug\03 -Business Logic Layer.csprojAssemblyReference.cache
+E:\visualstudio\Final Project\Server8\03 -Business Logic Layer\obj\Debug\03 -Business Logic Layer.csproj.CoreCompileInputs.cache
+E:\visualstudio\Final Project\Server8\03 -Business Logic Layer\obj\Debug\03 -Business Logic Layer.csproj.CopyComplete
+E:\visualstudio\Final Project\Server8\03 -Business Logic Layer\obj\Debug\03 -Business Logic Layer.dll
+E:\visualstudio\Final Project\Server8\03 -Business Logic Layer\obj\Debug\03 -Business Logic Layer.pdb
+E:\visualstudio\Final Project\Server9\03 -Business Logic Layer\bin\Debug\03 -Business Logic Layer.dll.config
+E:\visualstudio\Final Project\Server9\03 -Business Logic Layer\bin\Debug\03 -Business Logic Layer.dll
+E:\visualstudio\Final Project\Server9\03 -Business Logic Layer\bin\Debug\03 -Business Logic Layer.pdb
+E:\visualstudio\Final Project\Server9\03 -Business Logic Layer\bin\Debug\01 - Data Access Layer.dll
+E:\visualstudio\Final Project\Server9\03 -Business Logic Layer\bin\Debug\02 - Data Transfer Objects.dll
+E:\visualstudio\Final Project\Server9\03 -Business Logic Layer\bin\Debug\EntityFramework.dll
+E:\visualstudio\Final Project\Server9\03 -Business Logic Layer\bin\Debug\EntityFramework.SqlServer.dll
+E:\visualstudio\Final Project\Server9\03 -Business Logic Layer\bin\Debug\01 - Data Access Layer.pdb
+E:\visualstudio\Final Project\Server9\03 -Business Logic Layer\bin\Debug\01 - Data Access Layer.dll.config
+E:\visualstudio\Final Project\Server9\03 -Business Logic Layer\bin\Debug\02 - Data Transfer Objects.pdb
+E:\visualstudio\Final Project\Server9\03 -Business Logic Layer\bin\Debug\EntityFramework.xml
+E:\visualstudio\Final Project\Server9\03 -Business Logic Layer\bin\Debug\EntityFramework.SqlServer.xml
+E:\visualstudio\Final Project\Server9\03 -Business Logic Layer\obj\Debug\03 -Business Logic Layer.csprojAssemblyReference.cache
+E:\visualstudio\Final Project\Server9\03 -Business Logic Layer\obj\Debug\03 -Business Logic Layer.csproj.CoreCompileInputs.cache
+E:\visualstudio\Final Project\Server9\03 -Business Logic Layer\obj\Debug\03 -Business Logic Layer.csproj.CopyComplete
+E:\visualstudio\Final Project\Server9\03 -Business Logic Layer\obj\Debug\03 -Business Logic Layer.dll
+E:\visualstudio\Final Project\Server9\03 -Business Logic Layer\obj\Debug\03 -Business Logic Layer.pdb
+E:\visualstudio\Final Project\Server10\03 -Business Logic Layer\bin\Debug\03 -Business Logic Layer.dll.config
+E:\visualstudio\Final Project\Server10\03 -Business Logic Layer\bin\Debug\03 -Business Logic Layer.dll
+E:\visualstudio\Final Project\Server10\03 -Business Logic Layer\bin\Debug\03 -Business Logic Layer.pdb
+E:\visualstudio\Final Project\Server10\03 -Business Logic Layer\bin\Debug\01 - Data Access Layer.dll
+E:\visualstudio\Final Project\Server10\03 -Business Logic Layer\bin\Debug\02 - Data Transfer Objects.dll
+E:\visualstudio\Final Project\Server10\03 -Business Logic Layer\bin\Debug\EntityFramework.dll
+E:\visualstudio\Final Project\Server10\03 -Business Logic Layer\bin\Debug\EntityFramework.SqlServer.dll
+E:\visualstudio\Final Project\Server10\03 -Business Logic Layer\bin\Debug\01 - Data Access Layer.pdb
+E:\visualstudio\Final Project\Server10\03 -Business Logic Layer\bin\Debug\01 - Data Access Layer.dll.config
+E:\visualstudio\Final Project\Server10\03 -Business Logic Layer\bin\Debug\02 - Data Transfer Objects.pdb
+E:\visualstudio\Final Project\Server10\03 -Business Logic Layer\bin\Debug\EntityFramework.xml
+E:\visualstudio\Final Project\Server10\03 -Business Logic Layer\bin\Debug\EntityFramework.SqlServer.xml
+E:\visualstudio\Final Project\Server10\03 -Business Logic Layer\obj\Debug\03 -Business Logic Layer.csprojAssemblyReference.cache
+E:\visualstudio\Final Project\Server10\03 -Business Logic Layer\obj\Debug\03 -Business Logic Layer.csproj.CoreCompileInputs.cache
+E:\visualstudio\Final Project\Server10\03 -Business Logic Layer\obj\Debug\03 -Business Logic Layer.csproj.CopyComplete
+E:\visualstudio\Final Project\Server10\03 -Business Logic Layer\obj\Debug\03 -Business Logic Layer.dll
+E:\visualstudio\Final Project\Server10\03 -Business Logic Layer\obj\Debug\03 -Business Logic Layer.pdb
+E:\visualstudio\Final Project\Server11\03 -Business Logic Layer\bin\Debug\03 -Business Logic Layer.dll.config
+E:\visualstudio\Final Project\Server11\03 -Business Logic Layer\bin\Debug\03 -Business Logic Layer.dll
+E:\visualstudio\Final Project\Server11\03 -Business Logic Layer\bin\Debug\03 -Business Logic Layer.pdb
+E:\visualstudio\Final Project\Server11\03 -Business Logic Layer\bin\Debug\01 - Data Access Layer.dll
+E:\visualstudio\Final Project\Server11\03 -Business Logic Layer\bin\Debug\02 - Data Transfer Objects.dll
+E:\visualstudio\Final Project\Server11\03 -Business Logic Layer\bin\Debug\EntityFramework.dll
+E:\visualstudio\Final Project\Server11\03 -Business Logic Layer\bin\Debug\EntityFramework.SqlServer.dll
+E:\visualstudio\Final Project\Server11\03 -Business Logic Layer\bin\Debug\01 - Data Access Layer.pdb
+E:\visualstudio\Final Project\Server11\03 -Business Logic Layer\bin\Debug\01 - Data Access Layer.dll.config
+E:\visualstudio\Final Project\Server11\03 -Business Logic Layer\bin\Debug\02 - Data Transfer Objects.pdb
+E:\visualstudio\Final Project\Server11\03 -Business Logic Layer\bin\Debug\EntityFramework.xml
+E:\visualstudio\Final Project\Server11\03 -Business Logic Layer\bin\Debug\EntityFramework.SqlServer.xml
+E:\visualstudio\Final Project\Server11\03 -Business Logic Layer\obj\Debug\03 -Business Logic Layer.csprojAssemblyReference.cache
+E:\visualstudio\Final Project\Server11\03 -Business Logic Layer\obj\Debug\03 -Business Logic Layer.csproj.CoreCompileInputs.cache
+E:\visualstudio\Final Project\Server11\03 -Business Logic Layer\obj\Debug\03 -Business Logic Layer.csproj.CopyComplete
+E:\visualstudio\Final Project\Server11\03 -Business Logic Layer\obj\Debug\03 -Business Logic Layer.dll
+E:\visualstudio\Final Project\Server11\03 -Business Logic Layer\obj\Debug\03 -Business Logic Layer.pdb
+E:\visualstudio\Final Project\Server12\03 -Business Logic Layer\bin\Debug\03 -Business Logic Layer.dll.config
+E:\visualstudio\Final Project\Server12\03 -Business Logic Layer\bin\Debug\03 -Business Logic Layer.dll
+E:\visualstudio\Final Project\Server12\03 -Business Logic Layer\bin\Debug\03 -Business Logic Layer.pdb
+E:\visualstudio\Final Project\Server12\03 -Business Logic Layer\bin\Debug\01 - Data Access Layer.dll
+E:\visualstudio\Final Project\Server12\03 -Business Logic Layer\bin\Debug\02 - Data Transfer Objects.dll
+E:\visualstudio\Final Project\Server12\03 -Business Logic Layer\bin\Debug\EntityFramework.dll
+E:\visualstudio\Final Project\Server12\03 -Business Logic Layer\bin\Debug\EntityFramework.SqlServer.dll
+E:\visualstudio\Final Project\Server12\03 -Business Logic Layer\bin\Debug\01 - Data Access Layer.pdb
+E:\visualstudio\Final Project\Server12\03 -Business Logic Layer\bin\Debug\01 - Data Access Layer.dll.config
+E:\visualstudio\Final Project\Server12\03 -Business Logic Layer\bin\Debug\02 - Data Transfer Objects.pdb
+E:\visualstudio\Final Project\Server12\03 -Business Logic Layer\bin\Debug\EntityFramework.xml
+E:\visualstudio\Final Project\Server12\03 -Business Logic Layer\bin\Debug\EntityFramework.SqlServer.xml
+E:\visualstudio\Final Project\Server12\03 -Business Logic Layer\obj\Debug\03 -Business Logic Layer.csprojAssemblyReference.cache
+E:\visualstudio\Final Project\Server12\03 -Business Logic Layer\obj\Debug\03 -Business Logic Layer.csproj.CoreCompileInputs.cache
+E:\visualstudio\Final Project\Server12\03 -Business Logic Layer\obj\Debug\03 -Business Logic Layer.csproj.CopyComplete
+E:\visualstudio\Final Project\Server12\03 -Business Logic Layer\obj\Debug\03 -Business Logic Layer.dll
+E:\visualstudio\Final Project\Server12\03 -Business Logic Layer\obj\Debug\03 -Business Logic Layer.pdb
+E:\visualstudio\Final Project\Server13\03 -Business Logic Layer\bin\Debug\03 -Business Logic Layer.dll.config
+E:\visualstudio\Final Project\Server13\03 -Business Logic Layer\bin\Debug\03 -Business Logic Layer.dll
+E:\visualstudio\Final Project\Server13\03 -Business Logic Layer\bin\Debug\03 -Business Logic Layer.pdb
+E:\visualstudio\Final Project\Server13\03 -Business Logic Layer\bin\Debug\01 - Data Access Layer.dll
+E:\visualstudio\Final Project\Server13\03 -Business Logic Layer\bin\Debug\02 - Data Transfer Objects.dll
+E:\visualstudio\Final Project\Server13\03 -Business Logic Layer\bin\Debug\EntityFramework.dll
+E:\visualstudio\Final Project\Server13\03 -Business Logic Layer\bin\Debug\EntityFramework.SqlServer.dll
+E:\visualstudio\Final Project\Server13\03 -Business Logic Layer\bin\Debug\01 - Data Access Layer.pdb
+E:\visualstudio\Final Project\Server13\03 -Business Logic Layer\bin\Debug\01 - Data Access Layer.dll.config
+E:\visualstudio\Final Project\Server13\03 -Business Logic Layer\bin\Debug\02 - Data Transfer Objects.pdb
+E:\visualstudio\Final Project\Server13\03 -Business Logic Layer\bin\Debug\EntityFramework.xml
+E:\visualstudio\Final Project\Server13\03 -Business Logic Layer\bin\Debug\EntityFramework.SqlServer.xml
+E:\visualstudio\Final Project\Server13\03 -Business Logic Layer\obj\Debug\03 -Business Logic Layer.csprojAssemblyReference.cache
+E:\visualstudio\Final Project\Server13\03 -Business Logic Layer\obj\Debug\03 -Business Logic Layer.csproj.CoreCompileInputs.cache
+E:\visualstudio\Final Project\Server13\03 -Business Logic Layer\obj\Debug\03 -Business Logic Layer.csproj.CopyComplete
+E:\visualstudio\Final Project\Server13\03 -Business Logic Layer\obj\Debug\03 -Business Logic Layer.dll
+E:\visualstudio\Final Project\Server13\03 -Business Logic Layer\obj\Debug\03 -Business Logic Layer.pdb
+E:\visualstudio\Final Project\Server14\03 -Business Logic Layer\obj\Debug\03 -Business Logic Layer.csprojAssemblyReference.cache
+E:\visualstudio\Final Project\Server14\03 -Business Logic Layer\obj\Debug\03 -Business Logic Layer.csproj.CoreCompileInputs.cache
+E:\visualstudio\Final Project\Server14\03 -Business Logic Layer\obj\Debug\03 -Business Logic Layer.dll
+E:\visualstudio\Final Project\Server14\03 -Business Logic Layer\obj\Debug\03 -Business Logic Layer.pdb
+E:\visualstudio\Final Project\Server14\03 -Business Logic Layer\bin\Debug\03 -Business Logic Layer.dll.config
+E:\visualstudio\Final Project\Server14\03 -Business Logic Layer\bin\Debug\03 -Business Logic Layer.dll
+E:\visualstudio\Final Project\Server14\03 -Business Logic Layer\bin\Debug\03 -Business Logic Layer.pdb
+E:\visualstudio\Final Project\Server14\03 -Business Logic Layer\bin\Debug\01 - Data Access Layer.dll
+E:\visualstudio\Final Project\Server14\03 -Business Logic Layer\bin\Debug\02 - Data Transfer Objects.dll
+E:\visualstudio\Final Project\Server14\03 -Business Logic Layer\bin\Debug\EntityFramework.dll
+E:\visualstudio\Final Project\Server14\03 -Business Logic Layer\bin\Debug\EntityFramework.SqlServer.dll
+E:\visualstudio\Final Project\Server14\03 -Business Logic Layer\bin\Debug\01 - Data Access Layer.pdb
+E:\visualstudio\Final Project\Server14\03 -Business Logic Layer\bin\Debug\01 - Data Access Layer.dll.config
+E:\visualstudio\Final Project\Server14\03 -Business Logic Layer\bin\Debug\02 - Data Transfer Objects.pdb
+E:\visualstudio\Final Project\Server14\03 -Business Logic Layer\bin\Debug\EntityFramework.xml
+E:\visualstudio\Final Project\Server14\03 -Business Logic Layer\bin\Debug\EntityFramework.SqlServer.xml
+E:\visualstudio\Final Project\Server14\03 -Business Logic Layer\obj\Debug\03 -Business Logic Layer.csproj.CopyComplete
+E:\visualstudio\Final Project\Server15\03 -Business Logic Layer\bin\Debug\03 -Business Logic Layer.dll.config
+E:\visualstudio\Final Project\Server15\03 -Business Logic Layer\bin\Debug\03 -Business Logic Layer.dll
+E:\visualstudio\Final Project\Server15\03 -Business Logic Layer\bin\Debug\03 -Business Logic Layer.pdb
+E:\visualstudio\Final Project\Server15\03 -Business Logic Layer\bin\Debug\01 - Data Access Layer.dll
+E:\visualstudio\Final Project\Server15\03 -Business Logic Layer\bin\Debug\02 - Data Transfer Objects.dll
+E:\visualstudio\Final Project\Server15\03 -Business Logic Layer\bin\Debug\EntityFramework.dll
+E:\visualstudio\Final Project\Server15\03 -Business Logic Layer\bin\Debug\EntityFramework.SqlServer.dll
+E:\visualstudio\Final Project\Server15\03 -Business Logic Layer\bin\Debug\01 - Data Access Layer.pdb
+E:\visualstudio\Final Project\Server15\03 -Business Logic Layer\bin\Debug\01 - Data Access Layer.dll.config
+E:\visualstudio\Final Project\Server15\03 -Business Logic Layer\bin\Debug\02 - Data Transfer Objects.pdb
+E:\visualstudio\Final Project\Server15\03 -Business Logic Layer\bin\Debug\EntityFramework.xml
+E:\visualstudio\Final Project\Server15\03 -Business Logic Layer\bin\Debug\EntityFramework.SqlServer.xml
+E:\visualstudio\Final Project\Server15\03 -Business Logic Layer\obj\Debug\03 -Business Logic Layer.csprojAssemblyReference.cache
+E:\visualstudio\Final Project\Server15\03 -Business Logic Layer\obj\Debug\03 -Business Logic Layer.csproj.CoreCompileInputs.cache
+E:\visualstudio\Final Project\Server15\03 -Business Logic Layer\obj\Debug\03 -Business Logic Layer.csproj.CopyComplete
+E:\visualstudio\Final Project\Server15\03 -Business Logic Layer\obj\Debug\03 -Business Logic Layer.dll
+E:\visualstudio\Final Project\Server15\03 -Business Logic Layer\obj\Debug\03 -Business Logic Layer.pdb
+E:\visualstudio\Final Project\Server16\03 -Business Logic Layer\bin\Debug\03 -Business Logic Layer.dll.config
+E:\visualstudio\Final Project\Server16\03 -Business Logic Layer\bin\Debug\03 -Business Logic Layer.dll
+E:\visualstudio\Final Project\Server16\03 -Business Logic Layer\bin\Debug\03 -Business Logic Layer.pdb
+E:\visualstudio\Final Project\Server16\03 -Business Logic Layer\bin\Debug\01 - Data Access Layer.dll
+E:\visualstudio\Final Project\Server16\03 -Business Logic Layer\bin\Debug\02 - Data Transfer Objects.dll
+E:\visualstudio\Final Project\Server16\03 -Business Logic Layer\bin\Debug\EntityFramework.dll
+E:\visualstudio\Final Project\Server16\03 -Business Logic Layer\bin\Debug\EntityFramework.SqlServer.dll
+E:\visualstudio\Final Project\Server16\03 -Business Logic Layer\bin\Debug\01 - Data Access Layer.pdb
+E:\visualstudio\Final Project\Server16\03 -Business Logic Layer\bin\Debug\01 - Data Access Layer.dll.config
+E:\visualstudio\Final Project\Server16\03 -Business Logic Layer\bin\Debug\02 - Data Transfer Objects.pdb
+E:\visualstudio\Final Project\Server16\03 -Business Logic Layer\bin\Debug\EntityFramework.xml
+E:\visualstudio\Final Project\Server16\03 -Business Logic Layer\bin\Debug\EntityFramework.SqlServer.xml
+E:\visualstudio\Final Project\Server16\03 -Business Logic Layer\obj\Debug\03 -Business Logic Layer.csprojAssemblyReference.cache
+E:\visualstudio\Final Project\Server16\03 -Business Logic Layer\obj\Debug\03 -Business Logic Layer.csproj.CoreCompileInputs.cache
+E:\visualstudio\Final Project\Server16\03 -Business Logic Layer\obj\Debug\03 -Business Logic Layer.csproj.CopyComplete
+E:\visualstudio\Final Project\Server16\03 -Business Logic Layer\obj\Debug\03 -Business Logic Layer.dll
+E:\visualstudio\Final Project\Server16\03 -Business Logic Layer\obj\Debug\03 -Business Logic Layer.pdb
+E:\visualstudio\Final Project draft\Server16\03 -Business Logic Layer\bin\Debug\03 -Business Logic Layer.dll.config
+E:\visualstudio\Final Project draft\Server16\03 -Business Logic Layer\bin\Debug\03 -Business Logic Layer.dll
+E:\visualstudio\Final Project draft\Server16\03 -Business Logic Layer\bin\Debug\03 -Business Logic Layer.pdb
+E:\visualstudio\Final Project draft\Server16\03 -Business Logic Layer\bin\Debug\01 - Data Access Layer.dll
+E:\visualstudio\Final Project draft\Server16\03 -Business Logic Layer\bin\Debug\02 - Data Transfer Objects.dll
+E:\visualstudio\Final Project draft\Server16\03 -Business Logic Layer\bin\Debug\EntityFramework.dll
+E:\visualstudio\Final Project draft\Server16\03 -Business Logic Layer\bin\Debug\EntityFramework.SqlServer.dll
+E:\visualstudio\Final Project draft\Server16\03 -Business Logic Layer\bin\Debug\01 - Data Access Layer.pdb
+E:\visualstudio\Final Project draft\Server16\03 -Business Logic Layer\bin\Debug\01 - Data Access Layer.dll.config
+E:\visualstudio\Final Project draft\Server16\03 -Business Logic Layer\bin\Debug\02 - Data Transfer Objects.pdb
+E:\visualstudio\Final Project draft\Server16\03 -Business Logic Layer\bin\Debug\EntityFramework.xml
+E:\visualstudio\Final Project draft\Server16\03 -Business Logic Layer\bin\Debug\EntityFramework.SqlServer.xml
+E:\visualstudio\Final Project draft\Server16\03 -Business Logic Layer\obj\Debug\03 -Business Logic Layer.csprojAssemblyReference.cache
+E:\visualstudio\Final Project draft\Server16\03 -Business Logic Layer\obj\Debug\03 -Business Logic Layer.csproj.CoreCompileInputs.cache
+E:\visualstudio\Final Project draft\Server16\03 -Business Logic Layer\obj\Debug\03 -Business Logic Layer.csproj.CopyComplete
+E:\visualstudio\Final Project draft\Server16\03 -Business Logic Layer\obj\Debug\03 -Business Logic Layer.dll
+E:\visualstudio\Final Project draft\Server16\03 -Business Logic Layer\obj\Debug\03 -Business Logic Layer.pdb
+E:\visualstudio\Final Project draft\Server\03 -Business Logic Layer\bin\Debug\03 -Business Logic Layer.dll.config
+E:\visualstudio\Final Project draft\Server\03 -Business Logic Layer\bin\Debug\03 -Business Logic Layer.dll
+E:\visualstudio\Final Project draft\Server\03 -Business Logic Layer\bin\Debug\03 -Business Logic Layer.pdb
+E:\visualstudio\Final Project draft\Server\03 -Business Logic Layer\bin\Debug\01 - Data Access Layer.dll
+E:\visualstudio\Final Project draft\Server\03 -Business Logic Layer\bin\Debug\02 - Data Transfer Objects.dll
+E:\visualstudio\Final Project draft\Server\03 -Business Logic Layer\bin\Debug\EntityFramework.dll
+E:\visualstudio\Final Project draft\Server\03 -Business Logic Layer\bin\Debug\EntityFramework.SqlServer.dll
+E:\visualstudio\Final Project draft\Server\03 -Business Logic Layer\bin\Debug\01 - Data Access Layer.pdb
+E:\visualstudio\Final Project draft\Server\03 -Business Logic Layer\bin\Debug\01 - Data Access Layer.dll.config
+E:\visualstudio\Final Project draft\Server\03 -Business Logic Layer\bin\Debug\02 - Data Transfer Objects.pdb
+E:\visualstudio\Final Project draft\Server\03 -Business Logic Layer\bin\Debug\EntityFramework.xml
+E:\visualstudio\Final Project draft\Server\03 -Business Logic Layer\bin\Debug\EntityFramework.SqlServer.xml
+E:\visualstudio\Final Project draft\Server\03 -Business Logic Layer\obj\Debug\03 -Business Logic Layer.csprojAssemblyReference.cache
+E:\visualstudio\Final Project draft\Server\03 -Business Logic Layer\obj\Debug\03 -Business Logic Layer.csproj.CoreCompileInputs.cache
+E:\visualstudio\Final Project draft\Server\03 -Business Logic Layer\obj\Debug\03 -Business Logic Layer.csproj.CopyComplete
+E:\visualstudio\Final Project draft\Server\03 -Business Logic Layer\obj\Debug\03 -Business Logic Layer.dll
+E:\visualstudio\Final Project draft\Server\03 -Business Logic Layer\obj\Debug\03 -Business Logic Layer.pdb

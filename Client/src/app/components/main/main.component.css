@@ -1,0 +1,40 @@
+.one
+{
+    position: relative;
+    width: 450px;
+    left: 60%;
+    color:white;
+    border-radius: 25px;
+    background-color: rgba(36, 36, 36, 0.4);
+    transform: translateY(-50%);
+    top: 22%;
+}
+
+.two{
+    position: absolute;
+    width: 80%;
+    right: 10%;
+    text-align: right;
+    color:black;
+    font-size: larger;
+    background-color: rgba(183, 223, 39, 0.9);
+    transform: translateY(-50%);
+    top: 71%;
+    border-radius: 15px;
+}
+
+.three{
+    position: relative;
+    right: 30%;
+    bottom: 40%;
+}
+
+.four{
+    position: relative;
+    right: 23%;
+    bottom: 90%;
+}
+
+.form-control{
+    display: inline;
+}

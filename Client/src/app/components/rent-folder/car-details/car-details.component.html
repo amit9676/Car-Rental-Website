@@ -1,0 +1,42 @@
+<div dir='rtl' class='detailOfCarRent'>
+    <span>עלות השכרה יומית: ₪{{oneCar.dailyRent}}</span>
+    <br>
+    <span>עלות יום איחור: ₪{{oneCar.lateRent}}</span>
+    <hr>
+
+    <table>
+        <tr>
+            <td class='detailTitle'>סוג רכב: </td>
+            <td>{{oneCar.design.design}}</td>
+        </tr>
+        <tr>
+            <td class='detailTitle'>שנת ייצור: </td>
+            <td>{{oneCar.year}}</td>
+        </tr>
+        <tr>
+            <td class='detailTitle'>מספר רכב: </td>
+            <td>{{oneCar.carNum}}</td>
+        </tr>
+        <tr>
+            <td class='detailTitle'>גיר: </td>
+            <td>{{oneCar.gear.gear}}</td>
+        </tr>
+        <tr>
+            <td class='detailTitle'>קילומטרז': </td>
+            <td>{{oneCar.kilometrage}} ק"מ</td>
+        </tr>
+        <tr>
+            <td class='detailTitle'> האם פנוי להשכרה כעת: </td>
+            <td>{{rentAvailablilty() | carConditions}}</td>
+        </tr>
+        <tr>
+            <td class='detailTitle'>האם תקין להשכרה: </td>
+            <td>{{oneCar.functional | carConditions}}</td>
+        </tr>
+    </table>
+    <div *ngIf='!oneCar.functional' style='text-align: center; margin-top: 10px; margin-bottom: -10px;'>
+        <span style="color: red; font-size: large;">רכב זה אינו תקין להשכרה</span>
+    </div>
+    <br *ngIf='oneCar.functional'>
+    <button [disabled]='!oneCar.functional' routerLink="/rent-car/{{oneCar.id}}/rent-details" class='form-control'>בחר</button>
+</div>

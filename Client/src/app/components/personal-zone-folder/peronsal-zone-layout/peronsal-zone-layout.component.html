@@ -1,0 +1,25 @@
+<section>
+    <main>
+            <div style='height: 100%; width: 100%; position: relative; top: 50%; transform: translateY(-50%);'> <router-outlet></router-outlet></div>
+    </main>
+    
+    
+    <aside>
+            <div style='height: 100%; width: 100%; background-color: rgba(180,180,180,0.9);'>
+                <div style='display: inline;'>
+
+                    <img class='profilePic' *ngIf='loggedUser.image' title='{{loggedUser.userName}}'  src='http://localhost:57250/Uploads/{{loggedUser.image}}' style="position: relative; margin-top: 10%;">
+                    <img *ngIf='!loggedUser.image' title='{{loggedUser.userName}}'  src='/assets/images/userIcon.png' width="100px" style="position: relative; margin-top: 10%;">
+                    <br>
+                    <span style='font-size: large; font-weight: bold; color: rgb(22, 47, 85);'>{{loggedUser.userName}}</span>
+                    <br>
+                    <span style='color: rgb(22, 47, 85);'>{{loggedUser.rank.rank}}</span>
+                    
+                </div>
+                 <a routerLink="/personal-zone/user-details"  routerLinkActive='active'>מידע אישי</a>
+                 <a routerLink="/personal-zone/change-password" routerLinkActive='active'>שנה סיסמא</a>
+                 <a routerLink="/personal-zone/change-my-picture" routerLinkActive='active'>שנה תמונה</a>
+                 <a routerLink="/personal-zone/personal-orders" routerLinkActive='active'>ההזמנות שלי</a>
+            </div>
+    </aside>
+</section>

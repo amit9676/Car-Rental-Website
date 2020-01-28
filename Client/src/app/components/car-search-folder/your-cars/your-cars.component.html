@@ -1,0 +1,20 @@
+<section>
+    <header>
+            <div class='resultsAmountDiv'>
+                <span  class='resultsAmount'>{{cars.length | resultsAmountPipe}}</span>
+            </div>
+    </header>
+    <main>
+        <div class='left' *ngFor='let item of carsLeft; let i index'>
+            <app-car [car]='i'></app-car>
+            <br><br>
+        </div>
+    </main>
+
+    <footer>
+        <div class='right' *ngFor='let item of carsRight; let i index'>
+            <app-car [car]='i'></app-car>
+            <br><br>
+        </div>
+    </footer>
+</section>

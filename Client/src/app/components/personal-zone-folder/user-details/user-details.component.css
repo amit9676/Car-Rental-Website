@@ -1,0 +1,36 @@
+span{
+    font-size: large;
+}
+
+.signUpDiv{
+    width: 55%;
+    position: relative;
+    background-color: rgba(220,220,220,0.7);
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 15px;
+    color: rgb(22, 47, 85);
+    text-align: right;
+}
+
+.form-control{
+    display: inline;
+}
+
+.category{
+    font-weight: bold;
+}
+
+[title~="שמירה"]{
+    background-color: rgb(90, 196, 90);
+}
+button:disabled{
+    background-color: rgb(114, 187, 114);
+}
+
+.profilePic{
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+}

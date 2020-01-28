@@ -1,0 +1,29 @@
+.addCar{
+    width: 55%;
+    height: 90%;
+    position: relative;
+    background-color: rgba(220,220,220,0.7);
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    color: rgb(22, 47, 85);
+    text-align: right;
+    overflow: auto;
+}
+
+.form-control{
+    display: inline;
+}
+
+span{
+    font-weight: bold;
+}
+
+button:disabled{
+    background-color: rgb(114, 187, 114);
+}
+
+[title~="הוסף"]{
+    background-color: rgb(90, 196, 90);
+}

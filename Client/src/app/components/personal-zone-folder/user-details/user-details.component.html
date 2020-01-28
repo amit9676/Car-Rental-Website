@@ -1,0 +1,60 @@
+<div style='height: 100%; width: 100%;'>
+    <div *ngIf='myUser' dir='rtl' class='signUpDiv'>
+        <form #formInfo='ngForm'>
+            <h3 style='font-weight: bold; text-align:center;'>מידע אישי</h3>
+            <br>
+            <span class='category' style='margin: 10px; font-size: large; position: relative;'>שם משתמש: </span>
+            <span *ngIf='!editMode' style='margin: 10px; font-size: large; position: relative;'>{{myUser.userName}}</span>
+            <input (input)='validatedUserName = userHandler.checkUserName(allUsers, editUserName, myUser.id)' *ngIf='editMode' required maxlength="30" [(ngModel)]='editUserName' name="userName" type='text' style='margin: 10px; font-size: large; position: relative; width: 25%;' class='form-control'>
+            <br><br *ngIf='!editMode'>
+            <span class='category' style='margin: 10px; font-size: large; position: relative;'>שם פרטי: </span>
+            <span *ngIf='!editMode' style='margin: 10px; font-size: large; position: relative;'>{{myUser.firstName}} </span>
+            <input maxlength="30" *ngIf='editMode' required [(ngModel)]='editFirstName' name="firstName" type='text' style='margin: 10px; font-size: large; position: relative; width: 15%; margin-left: -65px;' class='form-control'>
+            
+            <span class='category' style='margin: 10px; font-size: large; position: relative; right: 24%;'>שם משפחה: </span>
+            <span *ngIf='!editMode' style='margin: 10px; font-size: large; position: relative; right: 24%;'>{{myUser.lastName}} </span>
+            <input *ngIf='editMode' maxlength="30" required [(ngModel)]='editLastName' name="lastName" type='text' style='margin: 10px; font-size: large; position: relative; width: 15%; right: 24%;' class='form-control'>      
+            <br><br *ngIf='!editMode'>
+            <span class='category' style='margin: 10px; font-size: large; position: relative;'>תעודת זהות: </span>
+            <span *ngIf='!editMode' style='margin: 10px; font-size: large; position: relative;'>{{myUser.socialNumber}} </span>
+            <input (input)='validatedSocialNumber = userHandler.checkSocialNumber(allUsers, editSocialNumber, myUser.id)' *ngIf='editMode' [(ngModel)]='editSocialNumber' name='socialNumber' required type='tel' pattern="[0-9]{9}" style='margin: 10px; font-size: large; position: relative; width: 15%; margin-left: -15px;' class='form-control'>
+            
+            <span class='category' style='margin: 10px; font-size: large; position: relative;  right: 15%;'>אימייל: </span>
+            <span *ngIf='!editMode' style='margin: 10px; font-size: large; position: relative;  right: 15%;'>{{myUser.email}} </span>
+            <input (input)='validatedEmail = userHandler.checkEmail(allUsers, editEmail, myUser.id)' *ngIf='editMode' [(ngModel)]='editEmail' name='email' required maxlength="100" type='text' pattern="^\w*@{1}\w*(.com|.co.il)$" type='text' style='margin: 10px; font-size: large; position: relative; width: 30%; right: 15%;' class='form-control'>
+            <br><br *ngIf='!editMode'>
+            <span class='category' style='margin: 10px; font-size: large; position: relative;'>תאריך לידה: </span>
+            <span  *ngIf='!editMode' style='margin: 10px; font-size: large; position: relative;'>{{myUser.dateOfBirth | date:'dd.MM.yyyy' | nullVal}} </span>
+            <input #birthDay (input)='isFuture = userHandler.checkDate(birthDay)' *ngIf='editMode' value='{{dateManager.checkYearInput(dateManager.getYear(initialBirthDate))}}-{{this.dateManager.getMonth(initialBirthDate)}}-{{dateManager.getDay(initialBirthDate)}}' (input)='editBirthDate = dateManager.editDate(birthDay)' type='date' style='margin: 10px; font-size: large; position: relative; width: 24%;  margin-left: -85px;' class='form-control'>
+
+            <span class='category' style='margin: 10px; font-size: large; position: relative; right: 15%;'>מין: </span>
+            <span *ngIf='!editMode' style='margin: 10px; font-size: large; position: relative; right: 15%;'>{{myUser.gender.gender}} </span>
+            <select *ngIf='editMode' required [(ngModel)]='editGender' name='gender' style='margin: 10px; font-size: large; position: relative; width: 15%; right: 15%;' class='form-control'>
+                <option value='1'>זכר</option>
+                <option value='2'>נקבה</option>
+            </select>
+            <br><br>
+            <span class='category' style='margin: 10px; font-size: large; position: relative;'>תמונה: </span>
+            <img class='profilePic' *ngIf='myUser.image'  src='http://localhost:57250/Uploads/{{myUser.image}}' style="position: relative;">
+            <span *ngIf='!myUser.image'>אין תמונה</span>
+            <br><br>
+            <div style='text-align: center; position: relative; bottom: 15%;'>
+                <span *ngIf='isFuture' class='category'  style='color: red; text-align: center;'>תאריך לידה לא יכול להיות בעתיד</span>
+                <br *ngIf='isFuture'>
+                <span *ngIf='!validatedUserName' class='category' style='color: red; text-align: center;'>שם משתמש זה כבר נמצא בשימוש</span>
+                <br *ngIf='!validatedUserName'>
+                <span *ngIf='!validatedEmail' class='category' style='color: red; text-align: center;'>אימייל זה כבר נמצא בשימוש</span>
+                <br *ngIf='!validatedEmail'>
+                <span *ngIf='!validatedSocialNumber' class='category' style='color: red; text-align: center;'>תעודת זהות זו כבר נמצאת בשימוש</span>
+                <br>
+            </div>
+            <button *ngIf='!editMode && loadPage' (click)='editMode = true' style='background-color: white; width: 75%; position: relative; margin-right: 10px; margin-bottom: 5px; right: 50%; transform: translateX(50%);' class='form-control'>עדכן נתונים</button>
+            <button *ngIf='editMode && loadPage' (click)='returntoNormal()' style='background-color: white; width: 35%; position: relative; margin-right: 10px; margin-bottom: 5px; right: 25%; transform: translateX(50%);' class='form-control'>בטל עריכה</button>
+            <button title='שמירה' (click)='saveChanges()' [disabled]="formInfo.form.invalid || !validatedUserName || !validatedSocialNumber || !validatedEmail || isFuture" *ngIf='editMode && loadPage' style='color: white; width: 35%; position: relative; margin-right: 10px; margin-bottom: 5px; transform: translateX(50%); right: 35%;' class='form-control'>שמור שינויים</button>
+            <img *ngIf='!loadPage && !errorPage' src="/assets/images/loading2.gif" style="position: relative; right: 50%; transform: translateX(50%); height: 70px;">
+            <div *ngIf='errorPage' style='position: relative; right: 50%; transform: translateX(50%); width:8%;'>
+                <span  dir='rtl' style='color: red; font-size: x-large; font-weight: bold;'>שגיאה!</span>
+            </div>
+        </form>
+    </div>
+</div>

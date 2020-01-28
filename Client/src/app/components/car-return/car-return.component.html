@@ -1,0 +1,16 @@
+<div class='return-screen'>
+   <div  class="return-box">
+      <h3 style='text-align: center; margin-bottom: 20px;'>החזר רכב מהשכרה</h3>
+      <span style='margin-right: 15px;'>הכנס מספר רכב: </span>
+      <input [(ngModel)]='searchValue' style='width: 95%; margin-right: 15px; margin-bottom: 20px;' type='tel' class='form-control'>
+      <div style='text-align: center;'>
+         <span *ngIf='carDoesNotExists' style='font-weight: bold; font-size: large; color: red;'>רכב זה לא קיים במערכת</span>
+         <span *ngIf='noActiveOrder' style='font-weight: bold; font-size: large; color: red;'>לרכב זה אין הזמנה פעילה או מאחרת</span>
+      </div>
+      <button *ngIf='loadPage' (click)='orderScan()' style='width: 70%; height: 35px; background-color: rgb(90, 196, 90); color: white; position: relative; right: 17%;' class='form-control'>החזר</button>
+      <img *ngIf='!loadPage && !errorPage' src="/assets/images/loading2.gif" style='position: relative; width: 8%; transform: translateX(50%); right: 50%;'>
+      <div *ngIf='errorPage' style='position: relative; right: 50%; transform: translateX(50%); width:16%;'>
+         <span  dir='rtl' style='color: red; font-size: x-large; font-weight: bold;'>שגיאה!</span>
+      </div>
+   </div>
+</div>

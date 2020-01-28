@@ -1,0 +1,47 @@
+<div class='designsScreen'>
+        <section>
+            
+            <header>
+                <div dir='rtl' style='width: 30%; height: 95%; position: relative; left: 50%; top: 5%; transform: translateX(-50%); background-color: rgba(220,220,220,0.7);'>
+                    <span style='position: relative; top: 20%; 
+                    color: rgb(22, 47, 85); font-weight: bold;'>חפש: </span>
+                    <input (input)='designFilter()' [(ngModel)]='searchValue' placeholder="חפש סוג רכב" style='width: 85%; position: relative; top: 15%;' type="text">
+                </div>
+            </header>
+            <main>
+                <div class='designsDiv'>
+                    <table>
+                        <th>סוג רכב</th>
+                        <th>אפשרויות</th>
+                        <tr *ngFor='let item of presentedDesigns'>
+                            <td>
+                                <span *ngIf='!editMode[item.id]'>{{item.design}}</span>
+                                <input *ngIf='editMode[item.id]' type='text' [(ngModel)]='designValue' maxlength="15" (input)='checkDesignValidation(item)'>
+                                <br *ngIf='editMode[item.id] && existingDesign'>
+                                <span *ngIf='editMode[item.id] && existingDesign' style='color: red; font-weight: bold; font-size: 15px;'>סוג רכב זה כבר קיים במערכת</span>
+                            </td>
+                            <td>
+                                <button *ngIf='!editMode[item.id] && !updateMode[item.id]' (click)='convertToInput(item)'>ערוך</button>
+                                <button [disabled]='!designValue || existingDesign' (click)='saveChanges(item)' *ngIf='editMode[item.id] && !updateMode[item.id]'>שמור</button>
+                                <br *ngIf='!updateMode[item.id]'>
+                                <button *ngIf='!updateMode[item.id]' (click)='deleteDesign(item)'>מחק</button>
+                                <img *ngIf='updateMode[item.id]' src="/assets/images/loading2.gif" style='width: 50px;'>
+                            </td>
+                        </tr>
+                    </table>
+                    <div *ngIf='!pageLoad && !errorPage'>
+                        <img src="/assets/images/loading2.gif">
+                    </div>
+                    <div *ngIf='errorPage' style="background-color: rgba(255, 255, 255, 0.8);">
+                        <span dir='rtl' style='color: red; font-size: x-large; font-weight: bold;'>שגיאה!</span>
+                    </div>
+                </div>
+            </main>
+            <footer>
+                <div style='width: 50%; height: 85%; position: relative; left: 50%; transform: translateX(-50%);  background-color: rgba(220,220,220,0.3);'>
+                    <button routerLink='/car-manager/manage-designs/add-design' class='form-control' style='position: relative; top: 5%; transform: translateX(-50%); left: 50%'>הוסף סוג רכב</button>
+                </div>
+            </footer>
+        </section>
+    </div>
+    

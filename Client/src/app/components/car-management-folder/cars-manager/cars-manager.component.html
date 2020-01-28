@@ -1,0 +1,124 @@
+<div class='carsScreen'>
+    <section>
+        
+        <header>
+            <div dir='rtl' style='width: 30%; height: 95%; position: relative; left: 50%; top: 5%; transform: translateX(-50%); background-color: rgba(220,220,220,0.7);'>
+                <span style='position: relative; top: 20%; 
+                color: rgb(22, 47, 85); font-weight: bold;'>חפש: </span>
+                <input [(ngModel)]='searchValue' placeholder="חפש לפי כל פרמטר" (input)='listFilter(allCars)' style='width: 85%; position: relative; top: 15%;' type="text">
+            </div>
+        </header>
+        <main>
+            <div class='carsDiv'>
+                <form #formInfo='ngForm'>
+                    <table>
+                        <th>מספר רכב</th>
+                        <th>יצרן</th>
+                        <th>דגם</th>
+                        <th>סוג רכב</th>
+                        <th>שנת ייצור</th>
+                        <th>גיר</th>
+                        <th>קילומטרז'</th>
+                        <th>עלות השכרה יומית</th>
+                        <th>עלות יום איחור</th>
+                        <th>תקינות</th>
+                        <th>סניף איסוף</th>
+                        <th>תמונה</th>
+                        <th>אפשרויות</th>
+                        <tr *ngFor='let item of presentedCars'>
+                            <td>
+                                <span *ngIf='!editMode[item.id]'>{{item.carNum}}</span>
+                                <input (input)='existingCar = carHandler.checkForExistingCar(allCars, givenCarNumber, item)' title='יש להכניס מספר רכב הכולל 7 או 8 ספרות' [(ngModel)]='givenCarNumber' name='numberOfCar' required pattern="[0-9]{7,8}" *ngIf='editMode[item.id]'>
+                                <br *ngIf='editMode[item.id]  && existingCar'>
+                                <span *ngIf='editMode[item.id] && existingCar' style='font-size: 14px; color: red;'>מספר רכב זה כבר נמצא בשימוש</span>
+                            </td>
+                            <td>
+                                <span *ngIf='!editMode[item.id]'>{{item.manufactor.manufactor}}</span>
+                                <select #manufactor (input)='givenManufactor = carHandler.getManufactorValue(manufactor)'  *ngIf='editMode[item.id]' [value]='givenManufactor' name='manufactor' (input)='presentedModels = carHandler.getManufactorModels(allModels, allManufactors, givenManufactor)' (input)='givenModel = presentedModels[0].id' required>
+                                    <option [value]='item.id' title="{{ carHandler.getManufactorModels(allModels, allManufactors, item.id).length == 0 ? 'ליצרן זה אין דגמים' : ''}}" [disabled]='carHandler.getManufactorModels(allModels, allManufactors, item.id).length == 0' *ngFor='let item of allManufactors' >{{item.manufactor}}</option>
+                                </select>
+                            </td>
+                            <td>
+                                <span *ngIf='!editMode[item.id]'>{{item.model.model}}</span>
+                                <select required *ngIf='editMode[item.id]' [(ngModel)]='givenModel'  name='model'>
+                                    <option [value]='item.id' *ngFor='let item of presentedModels'>{{item.model}}</option>
+                                </select>
+                                
+                            </td>
+                            <td>
+                                <span *ngIf='!editMode[item.id]'>{{item.design.design}}</span>
+                                <select [(ngModel)]='givenDesign' name='design' *ngIf='editMode[item.id]'>
+                                    <option [value]='item.id' *ngFor='let item of allDesigns'>{{item.design}}</option>
+                                </select>
+                            </td>
+                            <td>
+                                <span *ngIf='!editMode[item.id]'>{{item.year}}</span>
+                                <input [(ngModel)]='givenYear' (input)='isFuture = carHandler.checkForFuture(givenYear)' name='year' required type='number' *ngIf='editMode[item.id]'>
+                                <br *ngIf='editMode[item.id]  && isFuture'>
+                                <span *ngIf='editMode[item.id] && isFuture' style='font-size: 14px; color: red;'>שנת ייצור לא יכולה להיות בעתיד</span>
+                            </td>
+                            <td>
+                                <span *ngIf='!editMode[item.id]'>{{item.gear.gear}}</span>
+                                <select required [(ngModel)]='givenGear' name='carGear' *ngIf='editMode[item.id]'>
+                                    <option value='1'>ידני</option>
+                                    <option value='2'>אוטומטי</option>
+                                </select>
+                            </td>
+                            <td>
+                                <span *ngIf='!editMode[item.id]'>{{item.kilometrage}} ק"מ</span>
+                                <input type='number' maxlength="10" required [(ngModel)]='givenKilometrage' required name='kilometrage' *ngIf='editMode[item.id]'>
+                            </td>
+                            <td>
+                                <span *ngIf='!editMode[item.id]'>₪{{item.dailyRent}}</span>
+                                <input type='number' maxlength="10" required [(ngModel)]='givenDayRent' name='day' *ngIf='editMode[item.id]'>
+                            </td>
+                            <td>
+                                <span *ngIf='!editMode[item.id]'>₪{{item.lateRent}}</span>
+                                <input type='number' maxlength="10" required [(ngModel)]='givenLateRent' name='late' *ngIf='editMode[item.id]'>
+                            </td>
+                            <td title='שינוי תקינות הרכב לא ישפיע על הזמנות קיימות'>
+                                <span *ngIf='!editMode[item.id]'>{{item.functional | carConditions}}</span>
+                                <select [(ngModel)]='givenFunctionality' name='functionality' *ngIf='editMode[item.id]'>
+                                    <option [ngValue]='true'>כן</option>
+                                    <option [ngValue]='false'>לא</option>
+                                </select>
+                            </td>
+                            <td>
+                                <span *ngIf='!editMode[item.id]'>{{item.branch.address}}, {{item.branch.city}}</span>
+                                <select [(ngModel)]='givenBranch' name='branch' *ngIf='editMode[item.id]'>
+                                    <option [value]='item.id' *ngFor='let item of allBranches'>{{item.address}}, {{item.city}}</option>
+                                </select>
+                            </td>
+                            <td>
+                                <img *ngIf='item.picture' src='http://localhost:57250/Uploads/{{item.picture}}' style='height: 80px; width: 80px;'>
+                                <button routerLink='/car-manager/manage-cars/edit-car-picture/{{item.id}}' *ngIf='editMode[item.id]' style='font-size: medium; width: 95%;'>ערוך תמונה</button>
+                                </td>
+                            <td>
+
+                                <button *ngIf='!editMode[item.id] && !updateMode[item.id]' (click)='convertToInput(item)'>ערוך</button>
+                                <button [disabled]="formInfo.form.invalid || 1 > givenYear || givenYear % 1 != 0 || 0 > givenKilometrage ||
+                                     1 > givenDayRent || givenKilometrage > 1000000 || givenDayRent > 1000000 || givenLateRent > 1000000 ||
+                                      1 > givenLateRent || isFuture || existingCar || carHandler.getManufactorModels(allModels, allManufactors, givenManufactor).length == 0" (click)='saveChanges(item)' *ngIf='editMode[item.id] && !updateMode[item.id]'>שמור</button>
+                                <br *ngIf='!updateMode[item.id]'>
+                                <button *ngIf='!updateMode[item.id]' (click)='deleteCar(item)'>מחק</button>
+                                <img *ngIf='updateMode[item.id]' src="/assets/images/loading2.gif" style='width: 50px;'>
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+                <div *ngIf='!pageLoad && !errorPage'>
+                    <img src="/assets/images/loading2.gif">
+                </div>
+                <div *ngIf='errorPage' style="background-color: rgba(255, 255, 255, 0.8);">
+                    <span dir='rtl' style='color: red; font-size: x-large; font-weight: bold;'>שגיאה!</span>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div style='width: 50%; height: 85%; position: relative; left: 50%; transform: translateX(-50%);  background-color: rgba(220,220,220,0.3);'>
+                <button routerLink='/car-manager/manage-cars/add-car' class='form-control' style='position: relative; top: 5%; transform: translateX(-50%); left: 50%'>הוסף רכב</button>
+            </div>
+        </footer>
+    </section>
+</div>
+

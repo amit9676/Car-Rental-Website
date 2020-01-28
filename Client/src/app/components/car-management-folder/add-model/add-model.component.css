@@ -1,0 +1,33 @@
+.add-screen{
+    height: 100%;
+    width: 100%;
+}
+
+.add-box{
+    width: 500px;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: rgb(22, 47, 85);
+    border-radius: 15px;
+    position: relative;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    text-align: right;
+    direction: rtl;
+}
+
+button{
+    margin-bottom: 10px;
+}
+
+button:disabled{
+    background-color: rgb(114, 187, 114);
+}
+
+[title~="הוסף"]{
+    background-color: rgb(90, 196, 90);
+}
+
+.form-control{
+    display: inline;
+}

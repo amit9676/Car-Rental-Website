@@ -1,0 +1,7 @@
+<div dir='rtl' class='detailOfCarRent'>
+    <span>סניף איסוף</span>
+    <br>
+    <span *ngIf='oneBranch' style='font-size: medium;'>{{oneBranch.address}}, {{oneBranch.city}}</span>
+    <hr>
+    <iframe *ngIf='oneBranch' [src]='presentedURL' width="80%" height='75%' frameborder="5"  allowfullscreen=""></iframe>
+</div>

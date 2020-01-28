@@ -1,0 +1,44 @@
+.aCar{
+    width: 500px;
+    height: 200px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 15px;
+}
+
+section
+{
+    height: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 100%;
+}
+
+main{
+    grid-column: span 8;
+}
+
+aside{
+    grid-column: span 4;
+}
+
+img{
+    width: 200px;
+    height: 200px;
+    border-radius: 15px;
+    
+
+}
+
+h3{
+    position: relative;
+}
+
+.titlea{
+    font-weight: bold;
+}
+
+.info{
+    margin-bottom: 3px;
+}

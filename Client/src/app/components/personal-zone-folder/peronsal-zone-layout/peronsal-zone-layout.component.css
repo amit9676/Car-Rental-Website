@@ -1,0 +1,50 @@
+section
+{
+    height: 100%;
+    box-sizing: border-box; /*so width and height occupy the entire space*/
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 100%;
+}
+
+aside{
+    grid-column: span 1;
+}
+
+main{
+    grid-column: span 11;
+}
+
+.carsNameSpan{
+    position: relative;
+    font-size: 30px;
+    font-weight: bold;
+    color: rgb(22, 47, 85);
+    top: 10%;
+}
+
+a
+{
+    display:block;
+    position: relative;
+    font-size: large;
+    font-weight: bold;
+    padding-top: 20%;
+    padding-bottom: 20%;
+}
+
+.active
+{
+    
+    font-weight: bold;
+    background-color: rgba(255,255,255,0.4);
+    /*color: white;*/
+    
+}
+
+.profilePic{
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+}

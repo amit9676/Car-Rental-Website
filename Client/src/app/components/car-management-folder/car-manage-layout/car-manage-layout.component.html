@@ -1,0 +1,20 @@
+<section>
+    <header>
+        <div class='carTable'>
+                 <span class='carsTableSpan'>{{tableType}}</span>
+        </div>
+    </header>
+    <main>
+            <div style='height: 100%; width: 100%; position: relative; top: 50%; transform: translateY(-50%);'><router-outlet></router-outlet></div>
+    </main>
+    
+    
+    <aside>
+            <div style='height: 100%; width: 100%; background-color: rgba(180,180,180,0.9);'>
+                 <a routerLink='/car-manager/manage-cars' routerLinkActive='active'>נהל רכבים</a>
+                 <a routerLink='/car-manager/manage-manufactors' routerLinkActive='active'>נהל יצרנים</a>
+                 <a routerLink='/car-manager/manage-models' routerLinkActive='active'>נהל דגמים</a>
+                 <a routerLink='/car-manager/manage-designs' routerLinkActive='active'>נהל סוגי רכב</a>
+            </div>
+    </aside>
+</section>

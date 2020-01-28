@@ -1,0 +1,71 @@
+<div class='ordersScreen'>
+    <div class='titleDiv'>
+            <span class='title'>ניהול הזמנות</span>
+    </div>
+    <div dir='rtl' style='width: 30%; height: 7%; position: relative; top: 2%; left: 50%; transform: translateX(-50%); background-color: rgba(220,220,220,0.7);'>
+        <span style='position: relative; top: 20%; 
+        color: rgb(22, 47, 85); font-weight: bold;'>חפש: </span>
+        <input [(ngModel)]='searchValue' placeholder="חפש לפי כל פרמטר (לתאריך חפש כ- yyyy-mm-dd)" (input)='listFilter(allOrders)' style='width: 85%; position: relative; top: 15%;' type="text">
+        </div>
+    <div class='ordersDiv'>
+        <table>
+            <th>מספר הזמנה</th>
+            <th *ngIf='managerview'>משתמש מזמין</th>
+            <th>מספר רכב</th>
+            <th>תחילת הזמנה</th>
+            <th>סיום הזמנה</th>
+            <th>עלות הזמנה</th>
+            <th>סטטוס</th>
+            <th>אפשרויות</th>
+            <tr *ngFor='let item of presentedOrders'>
+                <td>
+                    <span>{{item.id}}</span>
+                </td>
+                <td  *ngIf='managerview'>
+                    <span>{{item.orderingUser.userName}}</span>
+                </td>
+                <td>
+                    <span>{{item.orderedCar.carNum}}</span>
+                </td>
+                <td>
+                    <span>{{item.startDate | date:'dd.MM.yyyy'}}</span>
+                </td>
+                <td>
+                    <span *ngIf='!editMode[item.id]'>{{item.endDate | date:'dd.MM.yyyy'}}</span>
+                    <input #orderEnd type='date' max='2999-12-31' (input)='getNewPrice(orderEnd,item)' (input)='edittedEndDate = dateManager.editDate(orderEnd)' (input)='compareOrdertoOtherOrders(orderEnd, item)' (input)='compareOrderDates(orderEnd, item)' value='{{dateManager.checkYearInput(dateManager.getYear(newEndDate))}}-{{this.dateManager.getMonth(newEndDate)}}-{{dateManager.getDay(newEndDate)}}' (input)='isFuture = dateManager.checkDate(orderEnd)' *ngIf='editMode[item.id]'>
+                    <br *ngIf='editMode[item.id]  && (!isFuture || endBeforeStart || anotherOrderExists)'>
+                    <span *ngIf='editMode[item.id] && (!isFuture || endBeforeStart)' style='font-size: 14px; color: red;'>תאריך סיום השכרה לא יכול להיות לפני תאריך תחילת השכרה, או בהווה/עבר</span>
+                    <span *ngIf='editMode[item.id] && anotherOrderExists' style='font-size: 14px; color: red;'>תאריך זה מתנגש עם הזמנה אחרת!</span>
+                </td>
+                <td>
+                    <span *ngIf='!editMode[item.id]'>{{item.price}}₪</span>
+                    <span *ngIf='editMode[item.id]'>{{orderNewPrice}}₪</span>
+                    
+                </td>
+                <td>
+                    <span>{{item.orderStatus}}</span>
+                </td>
+                <td>
+                    <button *ngIf='managerview && !updateMode[item.id]' (click)='getOutOfHeere(item)'>פרטי השכרה</button>
+                    <button *ngIf='!managerview && !updateMode[item.id]' (click)='getOutOfHeere(item)'>פרטי השכרה</button>
+                    
+                    <button (click)='deleteOrder(item)' *ngIf='item.orderStatus == "ממתין" && !managerview && !updateMode[item.id]'>בטל</button>
+
+                    <button (click)='returnCar(item)' (click)='editMode[item.id] = false' *ngIf='(item.orderStatus != "ממתין" || managerview) && !updateMode[item.id]' [disabled]='item.orderStatus == "הוחזר" || item.orderStatus == "ממתין"' >החזר</button>
+                    <button *ngIf='managerview && !editMode[item.id] && !updateMode[item.id]' [disabled]='item.orderStatus == "הוחזר" || item.orderStatus == "מאחר"' (click)='convertToInput(item)'>הארך השכרה</button>
+                    <button [disabled]='!isFuture || endBeforeStart || anotherOrderExists' *ngIf='editMode[item.id] && managerview && !updateMode[item.id]' (click)='saveOrderEndDate(edittedEndDate, item)'>שמור</button>
+
+                    <button (click)='deleteOrder(item)' *ngIf='managerview && !updateMode[item.id]'>מחק</button>
+                    <img *ngIf='updateMode[item.id]' src="/assets/images/loading2.gif" style='width: 50px;'>
+                </td>
+            </tr>
+        </table>
+        <div *ngIf='!loadPage && !errorPage'>
+            <img src="/assets/images/loading2.gif">
+        </div>
+        <div *ngIf='errorPage' style="background-color: rgba(255, 255, 255, 0.8);">
+            <span dir='rtl' style='color: red; font-size: x-large; font-weight: bold;'>שגיאה!</span>
+        </div>
+        
+    </div>
+</div>

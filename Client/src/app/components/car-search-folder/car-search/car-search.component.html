@@ -1,0 +1,80 @@
+
+<div *ngIf='!loadPage && !errorPage'>
+    <img src="/assets/images/loading2.gif">
+</div>
+<div *ngIf='errorPage' style="background-color: rgba(255, 255, 255, 0.8);">
+    <span dir='rtl' style='color: red; font-size: x-large; font-weight: bold;'>שגיאה!</span>
+</div>
+
+
+<section *ngIf='loadPage'>
+    <header>
+            <div class='resultsAmountDiv'>
+                    <span class='resultsAmount'>{{(carsRight.length + carsLeft.length) | resultsAmountPipe}}</span>
+                    <!--<span class='resultsAmount'>לא נמצאו תוצאות</span>-->
+            </div>
+    </header>
+    <main>
+        <div class='left' *ngFor='let item of carsLeft; let i index'>
+            <app-car [car]='i' (selectedCar)='getID($event)'></app-car>
+            <br><br>
+        </div>
+    </main>
+
+    <footer>
+        <div class='right' *ngFor='let item of carsRight; let i index'>
+            <app-car [car]='i' (selectedCar)='getID($event)'></app-car>
+            <br><br>
+        </div>
+    </footer>
+    
+    <aside>
+            <div class='search' dir='rtl'>
+                    <span style="font-size: large; font-weight: bold;">חפש רכב:</span>
+                    <br><br>
+                    <span>חיפוש חופשי</span>
+                    <br>
+                    <input (input)='carFilter(givenManufactor, givenModel, givenDesign, givenYear, givenStartDate, givenEndDate, givenGear)' class='form-control' type='text' placeholder="יצרן, דגם, סוג רכב, מספר רכב.." [(ngModel)]='givenSearch'>
+                    <br>
+                    <span>תאריך השכרה</span>
+                    <br>
+                    <input value='{{dateService.getYear(startDateSelected)}}-{{dateService.getMonth(startDateSelected)}}-{{dateService.getDay(startDateSelected)}}' #givenStartDate (input)='carFilter(givenManufactor, givenModel, givenDesign, givenYear, givenStartDate, givenEndDate, givenGear)' type='date' class='form-control'>
+                    <br>
+                    <span>תאריך החזרה</span>
+                    <input value='{{dateService.getYear(endDateSelected)}}-{{dateService.getMonth(endDateSelected)}}-{{dateService.getDay(endDateSelected)}}' #givenEndDate (input)='carFilter(givenManufactor, givenModel, givenDesign, givenYear, givenStartDate, givenEndDate, givenGear)' type='date' class='form-control'>
+                    <br>
+                    <span>יצרן</span>
+                    <br>
+                    <select [(ngModel)]='manuSelected' (input)='manucheck = true' (input)='carFilter(givenManufactor, givenModel, givenDesign, givenYear, givenStartDate, givenEndDate, givenGear)' #givenManufactor class='form-control'>
+                        <option value="All">הכל</option>
+                        <option [value]="item.manufactor" *ngFor='let item of manufactors'>{{item.manufactor}}</option>
+                    </select>
+                    <br>
+                    <span>דגם</span>
+                    <select [(ngModel)]='modelSelected' (input)='carFilter(givenManufactor, givenModel, givenDesign, givenYear, givenStartDate, givenEndDate, givenGear)' #givenModel class='form-control'>
+                        <option value='All'>הכל</option>
+                        <option [value]='item.model' *ngFor='let item of someModels'>{{item.model}}</option>
+                    </select>
+                    <br>
+                    <span>סוג רכב</span>
+                    <select (input)='carFilter(givenManufactor, givenModel, givenDesign, givenYear, givenStartDate, givenEndDate, givenGear)' #givenDesign class='form-control'>
+                        <option value='All'>הכל</option>
+                        <option [value]='item.design' *ngFor='let item of designs'>{{item.design}}</option>
+                    </select>
+                    <br>
+                    <span>שנת ייצור</span>
+                    <input min='1' max='9999' [value]='yearSelected' #givenYear (input)='carFilter(givenManufactor, givenModel, givenDesign, givenYear, givenStartDate, givenEndDate, givenGear)' type='number' class='form-control'>
+                    <br>
+                    <span>גיר</span>
+                    <select [(ngModel)]='gearSelected' #givenGear (input)='carFilter(givenManufactor, givenModel, givenDesign, givenYear, givenStartDate, givenEndDate, givenGear)' type='number' class='form-control'>
+                        <option value='All'>הכל</option>
+                        <option value='אוטומטי'>אוטומט</option>
+                        <option value='ידני'>ידני</option>
+                    </select>
+                    <br>
+                    <button (click)='carFilter(givenManufactor, givenModel, givenDesign, givenYear, givenStartDate, givenEndDate, givenGear)' style='position: relative;  margin: 3px; width: 90%; right: 4%;' class='form-control'>חפש</button>
+            </div>
+
+    </aside>
+
+</section>
