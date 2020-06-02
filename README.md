@@ -20,3 +20,5 @@ a. open "Client" folder with visual studio code.
 b. open the terminal, enter "npm install"
 
 c. after installation - enter "ng s -o" to run the website.
+
+d. you can access to any account via the excel file of "משתמשים"
